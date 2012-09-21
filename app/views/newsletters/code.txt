@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+      <!--<div class="control-group"><%= f.label("Permalink:", :class => "control-label") %>
+        <div class="controls"> <%= f.text_field(:permalink) %></div>
+      </div>
+
+      <div class="control-group"><%= f.label "Content Type:", :class => "control-label" %>
+        <div class="controls">
+
+          <label class="radio">
+            <%= f.radio_button(:content_type, "text") %>
+            Text </label>
+          <label class="radio"><%= f.radio_button(:content_type, "HTML") %>HTML</label>
+        </div>
+      </div>-->

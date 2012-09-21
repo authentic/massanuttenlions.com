@@ -1,0 +1,13 @@
+<% provide :page_title, "Club President" %>
+<div class="page-header">
+  <h1>Club President <%= @club.current_year %></h1></div>
+<%= image_tag @president.avatar.url(:large) %>
+<h4><%= @president.signature %> </h4>
+<h3>Mailing Address:</h3>
+<address>
+  <strong><%= @club.name %></strong><br>
+  <%= @club.mailing_address %>
+</address>
+<address><strong>Tel:</strong> <%= @club.phone %> <br>
+  <strong>Email Address: </strong> <a href="mailto:#" target="_blank"><%= @club.president_email %></a></address>
+

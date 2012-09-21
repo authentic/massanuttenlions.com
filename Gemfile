@@ -6,8 +6,8 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'simple-navigation-bootstrap'
 gem "ckeditor"
-gem "devise", "~> 2.001.2"
-gem "cancan", ">= 001.6.7"
+gem "devise"
+gem "cancan"
 gem "paperclip", "~> 2.7.0"
 gem "omniauth", "~> 001.001.0"
 gem "simple_form", "~> 2.0.2"
@@ -26,7 +26,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '3.2.5'
+  gem 'sass-rails', '3.2.5'
   gem 'coffee-rails', '3.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes

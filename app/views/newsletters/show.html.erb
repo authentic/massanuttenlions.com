@@ -1,0 +1,60 @@
+<% provide :page_title, "Show Newsletter: #{@newsletter.period}" %>
+<ul class="nav nav-pills">
+  <li>
+    <%= link_to({:controller => 'access', :action => 'menu'}, :class => "btn-primary") do %>
+        <i class="icon-home icon-white"></i> Admin Home
+    <% end %>
+  </li>
+
+  <li>
+    <%= link_to({:action => 'list'}, :class => "btn-primary") do %>
+        <i class="icon-th-list icon-white"></i> Newsletters List
+    <% end %>
+  </li>
+  <li>
+    <%= link_to(root_path, :class => "btn-primary") do %>
+        <i class="icon-home icon-white"></i> Site Home
+    <% end %>
+  </li>
+
+</ul>
+
+
+
+<div>
+
+  <h2><%= "Newsletter Detail View".upcase %> - "<%= @newsletter.period %>"</h2>
+  <table class="table table-striped table-bordered table-condensed" summary="Section detail view">
+    <tbody>
+    <tr>
+      <th width="130">Title:</th>
+      <td><%= @newsletter.title %></td>
+    </tr>
+    <tr>
+      <th>Period:</th>
+      <td><%= @newsletter.period.strftime("%B %Y") %></td>
+    </tr>
+    <tr>
+      <th>Visible:</th>
+      <td><%= @newsletter.visible ? 'true' : 'false' %></td>
+    </tr>
+    <tr>
+      <th>Header:</th>
+      <td><%= @newsletter.header.html_safe %></td>
+    </tr>
+
+    <tr>
+      <th>Created:</th>
+      <td><%= @newsletter.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated:</th>
+      <td><%= @newsletter.updated_at %></td>
+    </tr>
+    <tr>
+      <th>Content:</th>
+      <td><%= @newsletter.content.html_safe %></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

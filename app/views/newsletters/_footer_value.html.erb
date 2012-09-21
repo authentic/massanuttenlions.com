@@ -1,0 +1,30 @@
+<h3> <%= @club.current_year %> BOARD OF DIRECTORS</h3>
+<table class="table table-bordered table-condensed newsletter">
+  <tbody>
+  <tr>
+    <td>
+      <% @leaders.each do |leader| %>
+          <p><strong><em><%= leader.officers %>:</em></strong> <%= leader.signature %><br>
+      <% end %></p>
+    </td>
+    <td> <%= image_tag @club.avatar.url(:large) %> <br>
+      <i class="center"><%= @club.current_year %> BOARD OF DIRECTORS</i></td>
+  </tr>
+  </tbody>
+</table>
+<h3> <%= @newsletter.period.strftime("%B").upcase %> BIRTHDAYS</h3>
+<table class="table table-bordered table-condensed newsletter">
+  <tbody>
+  <tr>
+    <td width="20%"><%= image_tag("box.jpg") %></td>
+    <td width="80%">
+      <% @users.each do |user| %>
+          <% if user.birthday.strftime("%B") == @newsletter.period.strftime("%B") %>
+              <p><strong><em><%= user.signature %> <%= user.birthday.strftime("%B %d") %></em></strong> <br>
+          <% end %>
+      <% end %></p>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

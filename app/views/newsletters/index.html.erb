@@ -1,0 +1,21 @@
+<% provide :page_title, "Newsletter" %>
+<% unless @newsletter.nil? %>
+    <div class="well form-inline">
+      <div class="control-group">
+        <div class="controls"> <%= label_tag 'Archive:', nil, :class => 'control-label' %>
+        </div>
+      </div>
+    </div>
+    <% [@newsletter].each do |n| %>
+        <% provide :page_title, "Newsletter #{n.period.strftime('%B %Y')}" %>
+        <%= n.header.html_safe %>
+        <%= n.content.html_safe %>
+        <%= n.footer.html_safe %>
+    <% end %>
+<% else %>
+    <p class="alert alert-error">No data available!</p>
+<% end %>
+
+<%= @side_sections %>
+
+

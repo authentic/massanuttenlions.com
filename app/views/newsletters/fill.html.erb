@@ -1,0 +1,77 @@
+<% provide :page_title, "Fill Newsletter: #{@newsletter.title}" %>
+<ul class="nav nav-pills">
+  <li>
+    <%= link_to({:controller => 'access', :action => 'menu'}, :class => "btn-primary") do %>
+        <i class="icon-home icon-white"></i> Admin Home
+    <% end %>
+  </li>
+
+  <li>
+    <%= link_to({:controller => 'newsletters', :action => 'list'}, :class => "btn-primary") do %>
+        <i class="icon-th-list icon-white"></i> Newsletters List
+    <% end %>
+  </li>
+
+
+  <li>
+    <%= link_to(root_path, :class => "btn-primary") do %>
+        <i class="icon-home icon-white"></i> Site Home
+    <% end %>
+  </li>
+  <li>
+    <%= link_to({:controller => 'public', :action => 'show', :id => @newsletter.id}, :class => "btn-primary") do %>
+        <i class="icon-globe icon-white"></i> Site Page
+    <% end %>  </li>
+</ul>
+
+<%= form_for(:newsletter, :url => {:action => 'update', :id => @newsletter.id}, :html => {:class => "form-horizontal"}) do |f| %>
+    <%= error_messages_for(@newsletter) %>
+    <div class="well">
+      <fieldset>
+        <legend>
+          <%= "Fill Content -> Newsletter #{@newsletter.period.strftime('%B %Y')}".upcase %>
+        </legend>
+        <div class="control-group">
+          <%= f.label "Period:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.date_select :period, :start_year => 2011, :discard_day => true, :prompt => {:month => 'Select month', :year => 'Select year'} %></div>
+        </div>
+        <div class="control-group">
+          <%= f.label "Newsletter Title:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_field :title, :value => "Newsletter #{@newsletter.period.strftime("%B %Y")}", :class => "input-large" %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label "Visible:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.check_box(:visible) %></div>
+        </div>
+
+
+        <div class="control-group"><%= f.label "Content:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.cktext_area(:content, :toolbar => 'Full', :width => '100%', :height => '400px', :swf_params => {:assetable_type => 'Test', :assetable_id => 1}) %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label "Newsletter Header:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_area :header, :value => "#{render :partial => 'header_value'}", :class => "input-xxlarge" %>
+          </div>
+        </div>
+        <div class="control-group pull-right">
+          <%= f.label "Newsletter Footer:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_area :footer, :value => "#{render :partial => 'footer_value'}", :class => "input-xxlarge" %>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <%= f.submit "Save Newsletter", :class => "btn-large" %>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+<% end %>

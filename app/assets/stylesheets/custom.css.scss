@@ -1,0 +1,258 @@
+.yui3-g {
+  letter-spacing: -0.31em; /* webkit: collapse white-space between units */
+  *letter-spacing: normal; /* reset IE < 8 */
+  word-spacing: -0.43em; /* IE < 8 && gecko: collapse white-space between units */
+}
+
+.yui3-u {
+  display: inline-block;
+  zoom: 1;
+  *display: inline; /* IE < 8: fake inline-block */
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+}
+
+#layout {
+  padding-left: 200px; /* "left col" width */
+  padding-right: 200px; /* "right col" width */
+}
+
+.lion-menu {
+  background: url(Lion-menu.png) no-repeat;
+  padding-top: 170px;
+  padding-left: 20px;
+  height: 488px;
+}
+
+#nav {
+  margin-left: -200px; /* "left col" width */
+  width: 200px;
+
+}
+
+#extra {
+  width: 200px;
+  margin-right: -200px; /* "right col" width */
+}
+
+#main {
+  width: 100%;
+}
+
+.content {
+  padding: 0px 3% 0px 3%;
+}
+
+.form-board {
+  width: 450px;
+  margin: 0 auto;
+}
+
+/* header */
+.head-title {
+  color: #fdcd19;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.logo {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* header */
+
+/* home page */
+span.home-nav {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  color: #fdcd19;
+  text-size: 18px;
+  text-weight: bold;
+}
+
+.home-link {
+  position: relative;
+}
+
+/* home page */
+
+/* Errors */
+.fieldWithErrors {
+}
+
+.fieldWithErrors label {
+  color: #AA0000;
+}
+
+.fieldWithErrors input {
+}
+
+.errorExplanation {
+  width: 400px;
+  padding: 0;
+  margin: 0 auto 1.5em;
+  border: 1px solid #AA0000;
+  background-color: #FFFFFF;
+  font-size: 12px;
+}
+
+.errorExplanation h2 {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 5px 5px 15px;
+  margin: 0;
+  width: 380px;
+  background-color: #AA0000;
+  color: #FFFFFF;
+}
+
+.errorExplanation p {
+  color: #333333;
+  margin: 0;
+  padding: 3px 0.5em;
+}
+
+.errorExplanation ul {
+  margin-top: 0;
+}
+
+.errorExplanation ul li {
+  list-style: square;
+}
+
+.img-right {
+  margin: 0px 0px 5px 10px;
+  width: auto;
+}
+
+.img-left {
+  margin: 0px 10px 5px 0px;
+  width: auto;
+}
+
+.img-center {
+  margin: 0px auto;
+  width: auto;
+}
+
+.img-left th, .img-left td, .img-right th, .img-right td, .img-center th, .img-center td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.center {
+  text-align: center
+}
+
+.newsletter h1 {
+  font-family: 'Kaushan Script', cursive;
+  color: #a52a2a;
+  font-size: 30px;
+}
+
+.newsletter {
+  text-align: center;
+}
+
+.newsletter th, .newsletter td, {
+  text-align: center;
+}
+
+.carousel {
+  margin-bottom: 0;
+}
+
+#gallery {
+  position: relative;
+  height: 100%;
+  margin: 2ex 0;
+}
+
+#gallery .item {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  float: left;
+  background: #fdcd19;
+  cursor: pointer;
+}
+
+#gallery .item.loading {
+  background: none;
+}
+
+#gallery .showcase {
+  position: absolute;
+  width: 160px;
+  background: #fdcd19;
+  z-index: 2;
+}
+
+#gallery .showcase .name {
+  color: #b45900;
+  font-size: 90%;
+  margin: 10px 10px 0 14px;
+}
+
+#gallery .showcase .post {
+  color: #0d0b5a;
+  font-size: 70%;
+  font-style: italic;
+  margin: 10px 10px 10px 14px;
+}
+
+#gallery .showcase ins.i {
+  width: 16px;
+  height: 16px;
+  left: auto;
+  right: -7px;
+  top: -9px;
+  cursor: pointer;
+}
+
+#gallery .showcase ins.i i {
+  left: -223px;
+}
+
+#gallery .showcase .d {
+  background-image: url(mini-menu-shadow.png);
+}
+
+.print,
+.hidden,
+.for-contrast,
+.js .jhidden {
+  display: none;
+}
+
+ins.i {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+ins.i i {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 40px;
+  background: transparent url(ico-20.png) no-repeat 0 0;
+}
+
+ins.i:hover i {
+  top: -20px;
+  margin-left: 0%;
+}
+
+/* margin-left in percentage is for IE7/8 hover bug */

@@ -1,4 +1,21 @@
 MassanuttenlionsCom::Application.routes.draw do
+
+
+  devise_for :users
+
+  mount Ckeditor::Engine => '/ckeditor'
+
+  namespace :mercury do
+    resources :images
+  end
+
+  mount Mercury::Engine => '/'
+  resources :pages, :except => [:edit, :index, :list, :new, :show, :destroy, :delete] do
+    member { post :mercury_update }
+  end
+  resources :subjects, :except => :destroy
+  match 'admin', :to => 'access#menu'
+  match 'show/:id', :to => 'public#show'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,11 +65,14 @@ MassanuttenlionsCom::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'static_pages#home'
+  authenticated :user do
+    root :to => 'static_pages#home'
+  end
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  match ':controller(/:action(/:id))(.:format)'
 end

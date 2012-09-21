@@ -1,0 +1,37 @@
+<% provide :page_title, 'Create Newsletter' %>
+<ul class="nav nav-pills">
+  <li>
+    <%= link_to({:controller => 'access', :action => 'menu'}, :class => "btn-primary") do %>
+        <i class="icon-home icon-white"></i> Admin Home
+    <% end %>
+  </li>
+  <li>
+    <%= link_to({:action => 'list'}, :class => "btn-primary") do %>
+        <i class="icon-th-list icon-white"></i> Newsletters List
+    <% end %>
+  </li>
+  <li>
+    <%= link_to(root_path, :class => "btn-primary") do %>
+        <i class="icon-home icon-white"></i> Site Home
+    <% end %>
+  </li>
+
+</ul>
+
+<%= form_for(:newsletter, :url => {:action => 'create'}, :html => {:multipart => true, :class => "form-horizontal"}) do |f| %>
+    <%= error_messages_for(@newsletter) %>
+    <div class="well">
+      <fieldset>
+        <legend>Create Newsletter</legend>
+        <div class="control-group">
+          <%= f.label "Period:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.date_select :period, :start_year => 2011, :discard_day => true, :prompt => {:month => 'Select month', :year => 'Select year'} %></div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <%= f.submit "Create Newsletter", :class => "btn-large" %></div>
+        </div>
+      </fieldset>
+<% end %>
+</div>

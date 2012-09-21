@@ -1,0 +1,30 @@
+<%= header_value do %>
+    <table class='table table-bordered table-condensed newsletter'>
+      <tbody>
+      <tr>
+        <td width='70%'><h1 class='newsletter'> Mountain Lion <%= @newsletter.period.strftime("%B %Y") %></h1>
+          <br>
+
+          <h3> <%= @club.name %> <br> <%= @club.mailing_address %> </h3><br>
+          <h4>
+            <% if @president %>
+                President: <%= @president.signature %>
+                <a href='mailto:#' target='_blank'> <%= @club.president_email %></a><br>
+            <% end %>
+            <% if @secretary %>
+                Secretary: <%= @secretary.signature %>
+                <a href='mailto:#' target='_blank'> <%= @club.secretary_email %></a> <br>
+            <% end %>
+            <% if @editor %>
+                Newsletter: <%= @editor.signature %>
+                <a href='mailto:#' target='_blank'> <%= @club.newsletter_editor_email %></a><br>
+            <% end %>
+          </h4>
+        </td>
+        <td width='30%'>
+          <img alt='Mountain Lion' src='/ckeditor_assets/pictures/1/content_logonewsletter1.jpg?1343869567'>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+<% end %>
