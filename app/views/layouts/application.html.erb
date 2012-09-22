@@ -17,6 +17,7 @@
   <![endif]-->
 
   <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "print", :media => "print" %>
 </head>
 <body data-spy="scroll" data-target=".subnav" data-offset="50" onload="initialize()">
 <%= render "layouts/header" %>
@@ -28,7 +29,7 @@
       </div>
       <div class="yui3-u" id="main">
         <div class="content"><%= render 'layouts/messages' %>
-          <%= render_navigation :renderer => :breadcrumbs, :join_with => " &gt; ", :static_leaf => true %>
+          <div class="breadcrumbs"><%= render_navigation :renderer => :breadcrumbs, :join_with => " &gt; ", :static_leaf => true %>  </div>
           <%= yield %>
 
           <hr/>

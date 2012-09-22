@@ -3,6 +3,7 @@
 <head>
   <title><%= full_title(yield(:page_title)) %></title>
   <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "print", :media => "print" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
@@ -40,7 +41,7 @@
               // marker.
               window.setTimeout(function () {
                   map.panTo(marker.getPosition());
-              }, 3000);
+              }, 50000);
           });
 
           google.maps.event.addListener(marker, 'click', function () {

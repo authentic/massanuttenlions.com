@@ -140,7 +140,12 @@ span.home-nav {
   width: auto;
 }
 
-.img-left th, .img-left td, .img-right th, .img-right td, .img-center th, .img-center td {
+.img-nonstyle {
+  margin: 0;
+  width: auto;
+}
+
+.img-left th, .img-left td, .img-right th, .img-right td, .img-center th, .img-center td, .img-nonstyle th, .img-nonstyle td {
   text-align: center;
   vertical-align: middle;
 }
@@ -255,4 +260,3 @@ ins.i:hover i {
   margin-left: 0%;
 }
 
-/* margin-left in percentage is for IE7/8 hover bug */

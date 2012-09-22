@@ -1,6 +1,6 @@
 class NewslettersController < ApplicationController
-  require 'rubygems'
-  require 'data_mapper'
+  #require 'rubygems'
+  #require 'data_mapper'
   require 'google/api_client'
   require 'logger'
   CALLBACK_URL = "http://localhost:3000/oauth/callback"

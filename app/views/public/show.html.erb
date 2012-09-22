@@ -8,19 +8,19 @@
 
 
 
-
-<% if user_signed_in? %>
-    <% if current_user.has_role? :admin %>
-        <%= link_to("/editor" + request.path, :id => "edit_link", :data => {:save_url => mercury_update_page_path(@page)}, :class => "btn btn-mini btn-primary") do %>
-            <i class="icon-pencil"></i> Edit Page With Mercury
-        <% end %>
-        <%= link_to({:controller => 'pages', :action => 'edit', :id => @page.id}, :class => "btn btn-mini btn-primary") do %>
-            <i class="icon-pencil"></i> Edit Page With Ckeditor
-        <% end %>
-        <hr>
-    <% end %>
-<% end %>
-
+<div class="edit-menu">
+  <% if user_signed_in? %>
+      <% if current_user.has_role? :admin %>
+          <%= link_to("/editor" + request.path, :id => "edit_link", :data => {:save_url => mercury_update_page_path(@page)}, :class => "btn btn-mini btn-primary") do %>
+              <i class="icon-pencil"></i> Edit Page With Mercury
+          <% end %>
+          <%= link_to({:controller => 'pages', :action => 'edit', :id => @page.id}, :class => "btn btn-mini btn-primary") do %>
+              <i class="icon-pencil"></i> Edit Page With Ckeditor
+          <% end %>
+          <hr>
+      <% end %>
+  <% end %>
+</div>
 <div id='page_content' data-mercury='full'>
   <% case @page.content_type
        when 'HTML' %>

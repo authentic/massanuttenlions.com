@@ -79,8 +79,8 @@ SimpleNavigation::Configuration.run do |navigation|
       primary.item :news_and_information, 'News And Information', '/show/news_and_information' do |sub_nav|
         sub_nav.item :club_newsletters, 'Club Newsletters', '/newsletters/index'
         sub_nav.item :newsroom, 'Newsroom', '/show/newsroom'
-        sub_nav.item :conferences_and_forms, 'Conferences And Forms', '/show/conferences_and_forms'
-        sub_nav.item :how_to_become_a_club_member, 'Become A Club Member', '/show/how_to_become_a_club_member'
+        sub_nav.item :conferences_and_forms, 'Forms', '/show/conferences_and_forms'
+        sub_nav.item :how_to_become_a_club_member, 'Membership', '/show/how_to_become_a_club_member'
         sub_nav.item :faq, 'FAQ', '/show/faq'
         sub_nav.item :helpful_links, 'Helpful Links', '/show/helpful_links'
       end
@@ -89,8 +89,8 @@ SimpleNavigation::Configuration.run do |navigation|
         sub_nav.item :calendar, 'Calendar', '/calendar'
         sub_nav.item :bingo_schedule, 'Bingo Schedule', '/show/bingo_schedule'
         sub_nav.item :project_read_schedule, 'Project Read Schedule', '/show/project_read_schedule'
-        sub_nav.item :phone_book, 'Phone Book', '/show/phone_book', :if => Proc.new { user_signed_in? }
-        sub_nav.item :members_information, 'Members Information', '/show/members_information', :if => Proc.new { user_signed_in? }
+        sub_nav.item :phone_book, 'Phone Book', '/phone_book/show', :if => Proc.new { user_signed_in? }
+        sub_nav.item :members_information, 'Members Information', '/members_information/show', :if => Proc.new { user_signed_in? }
         sub_nav.item :budget, 'Budget', '/show/budget', :if => Proc.new { user_signed_in? }
       end
       primary.item :contact_us, 'Contact Us', '/contacts/contact_us' do |sub_nav|

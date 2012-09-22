@@ -41,8 +41,11 @@
           <td><%= status_tag(subject.visible) %></td>
           <td><%= subject.pages.size %></td>
           <td>
+            <%= link_to({:controller => 'pages', :action => 'list', :subject_id => subject.id}, :class => 'btn btn-mini btn-success') do %>
+                <i class="icon-file"></i> Pages
+            <% end %>
             <%= link_to({:action => 'edit', :id => subject.id}, :class => 'btn btn-mini btn-primary') do %>
-                <i class="icon-pencil"></i> Edit
+                <i class="icon-pencil"></i> Edit Subject
             <% end %>
             <%= link_to({:action => 'delete', :id => subject.id}, :class => 'btn btn-mini btn-danger') do %>
                 <i class="icon-trash"></i> Delete
@@ -50,9 +53,7 @@
             <%= link_to({:action => 'show', :id => subject.id}, :class => 'btn btn-mini btn-info') do %>
                 <i class="icon-info-sign"></i> Info
             <% end %>
-            <%= link_to({:controller => 'pages', :action => 'list', :subject_id => subject.id}, :class => 'btn btn-mini btn-success') do %>
-                <i class="icon-file"></i> Pages
-            <% end %>
+
           </td>
         </tr>
     <% end %>
