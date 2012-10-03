@@ -1,30 +1,36 @@
 <%= header_value do %>
-    <table class='table table-bordered table-condensed newsletter'>
+    <table class='table table-condensed newsletter'>
       <tbody>
       <tr>
-        <td width='70%'><h1 class='newsletter'> Mountain Lion <%= @newsletter.period.strftime("%B %Y") %></h1>
-          <br>
+        <td width="70%"><h1 class='newsletter'> Mountain Lion <%= @newsletter.period.strftime("%B %Y") %></h1>
 
-          <h3> <%= @club.name %> <br> <%= @club.mailing_address %> </h3><br>
-          <h4>
+
+          <p><strong><%= @club.name %></strong> <br> <%= @club.mailing_address %> </p>
+
+          <small>
             <% if @president %>
-                President: <%= @president.signature %>
+                <em><strong>President:</strong></em> <%= @president.signature %>
                 <a href='mailto:#' target='_blank'> <%= @club.president_email %></a><br>
             <% end %>
             <% if @secretary %>
-                Secretary: <%= @secretary.signature %>
-                <a href='mailto:#' target='_blank'> <%= @club.secretary_email %></a> <br>
+                <em><strong>Secretary:</strong></em> <%= @secretary.signature %>
+                <a href='mailto:#' target='_blank'> <%= @club.secretary_email %></a><br>
             <% end %>
             <% if @editor %>
-                Newsletter: <%= @editor.signature %>
+                <em><strong> Newsletter:</strong></em> <%= @editor.signature %>
                 <a href='mailto:#' target='_blank'> <%= @club.newsletter_editor_email %></a><br>
             <% end %>
-          </h4>
+            <% if @photographer %>
+                <em><strong>Photographer:</strong></em> <%= @photographer.signature %>
+                <a href='mailto:#' target='_blank'> <%= @club.photographer_email %></a><br>
+            <% end %>
+          </small>
         </td>
-        <td width='30%'>
-          <img alt='Mountain Lion' src='/ckeditor_assets/pictures/1/content_logonewsletter1.jpg?1343869567'>
+        <td width="30%">
+          <img alt='Mountain Lion' src='/ckeditor_assets/pictures/79/content_logonewsletter1.jpg?1348861857' class='img-circle'>
         </td>
       </tr>
       </tbody>
     </table>
+    <hr class="hrLion">
 <% end %>

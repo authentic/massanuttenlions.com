@@ -17,7 +17,7 @@
     <ul class="nav nav-pills">
       <li>
         <%= link_to({:action => 'new'}, :class => "btn-info") do %>
-            <i class="icon-plus"></i> Add New Club
+            <i class="icon-plus"></i> Add New Club Information
         <% end %>    </li>
     </ul>
 
@@ -87,8 +87,11 @@
 
           <tr>
             <th>Actions:</th>
-            <td> <%= link_to({:action => 'edit', :id => club.id}, :class => "btn") do %>
+            <td> <%= link_to({:action => 'edit', :id => club.id}, :class => "btn btn-mini btn-primary") do %>
                   <i class="icon-pencil"></i> Edit
+              <% end %>
+              <%= link_to({:action => 'delete', :id => club.id}, :class => "btn btn-mini btn-danger") do %>
+                  <i class="icon-trash"></i> Delete
               <% end %>
 
 

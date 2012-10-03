@@ -32,7 +32,32 @@ body {
 // Example:
 // @linkColor: #ff0000;
 @navbarHeight: 63px;
-@navbarBackground: #73C0EB;
-@navbarBackgroundHighlight: #04498c;
+@navbarBackground: #fff;
+@navbarBackgroundHighlight: #fff;
 
+// Typography
+// -------------------------
+@sansFontFamily: "PT Sans", "DejaVu Sans", "Bitstream Vera Sans", Verdana, sans-serif;
+@serifFontFamily: "Vollkorn", Georgia, "Times New Roman", Times, serif;
+@monoFontFamily: Menlo, Monaco, Consolas, "Courier New", monospace;
 
+@baseFontSize: 14px;
+@baseFontFamily: @sansFontFamily;
+@baseLineHeight: 18px;
+@altFontFamily: @serifFontFamily;
+
+@headingsFontFamily: inherit;
+// empty to use BS default, @baseFontFamily
+@headingsFontWeight: bold;
+// instead of browser default, bold
+@headingsColor: inherit;
+// empty to use BS default, @textColor
+
+.page-header {
+  color: #a52a2a;
+}
+
+p {
+  font-size: 16px;
+  line-height: 25px;
+}

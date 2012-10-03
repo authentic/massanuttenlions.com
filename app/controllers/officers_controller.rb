@@ -10,6 +10,6 @@ class OfficersController < ApplicationController
 
   def show
     @users = User.sorted_by_officers.where(:status => "Active", :officers => ['President', 'Vice President', 'Secretary', 'Treasurer', 'Director'])
-    @current_year=Club.first
+    @current_year=Club.last
   end
 end

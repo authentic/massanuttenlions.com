@@ -1,28 +1,29 @@
-<h3> <%= @club.current_year %> BOARD OF DIRECTORS</h3>
-<table class="table table-bordered table-condensed newsletter">
+<h5> <%= @club.current_year %> BOARD OF DIRECTORS</h5>
+<table class="table table-condensed ">
   <tbody>
   <tr>
-    <td>
+    <td width="50%">
       <% @leaders.each do |leader| %>
-          <p><strong><em><%= leader.officers %>:</em></strong> <%= leader.signature %><br>
-      <% end %></p>
+          <em><%= leader.leadership %>:</em></strong> <%= leader.signature %>
+          <br>
+      <% end %>
     </td>
-    <td> <%= image_tag @club.avatar.url(:large) %> <br>
+    <td width="50%"> <%= image_tag @club.avatar.url(:large) %> <br>
       <i class="center"><%= @club.current_year %> BOARD OF DIRECTORS</i></td>
   </tr>
   </tbody>
 </table>
-<h3> <%= @newsletter.period.strftime("%B").upcase %> BIRTHDAYS</h3>
-<table class="table table-bordered table-condensed newsletter">
+<h5> <%= @newsletter.period.strftime("%B").upcase %> BIRTHDAYS</h5>
+<table class="table table-condensed">
   <tbody>
   <tr>
-    <td width="20%"><%= image_tag("box.jpg") %></td>
-    <td width="80%">
+    <td width="50%"><%= image_tag("box.jpg") %></td>
+    <td width="50%">
       <% @users.each do |user| %>
           <% if user.birthday.strftime("%B") == @newsletter.period.strftime("%B") %>
-              <p><strong><em><%= user.signature %> <%= user.birthday.strftime("%B %d") %></em></strong> <br>
+              <em><%= user.signature %> ... <%= user.birthday.strftime("%B %d") %></em><br>
           <% end %>
-      <% end %></p>
+      <% end %>
     </td>
   </tr>
   </tbody>

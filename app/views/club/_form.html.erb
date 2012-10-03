@@ -76,6 +76,12 @@
   </div>
 </div>
 <div class="control-group">
+  <%= f.label "Photographer Email:", :class => "control-label", :for => "input02" %>
+  <div class="controls">
+    <%= f.email_field :photographer_email, :class => "input-large", :id => "input02" %>
+  </div>
+</div>
+<div class="control-group">
   <%= f.label "Phone:", :class => "control-label", :for => "input12" %>
   <div class="controls">
     <%= f.text_field :phone, :class => "input-large", :id => "input12" %>

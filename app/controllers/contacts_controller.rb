@@ -3,17 +3,17 @@ class ContactsController < ApplicationController
   before_filter :advertising
 
   def contact_us
-    @club=Club.all
+    @club=Club.last
   end
 
   def president
-    @club=Club.all
+    @club=Club.last
     @president= User.where(:status => "Active", :leadership => ['President']).first
 
   end
 
   def webmaster
-    @club=Club.all
+    @club=Club.last
     @webmaster= User.sorted.where(:status => "Active", :webmaster => ['Webmaster'])
 
   end

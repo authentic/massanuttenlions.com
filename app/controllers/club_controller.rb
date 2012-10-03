@@ -10,7 +10,7 @@ class ClubController < ApplicationController
   end
 
   def list
-    @clubs = Club.order("clubs.name ASC")
+    @clubs = Club.order("clubs.created_at DESC")
   end
 
   def new
@@ -55,5 +55,16 @@ class ClubController < ApplicationController
       @club_count_count = Club.count
       render('edit')
     end
+  end
+
+  def delete #Display delete record form
+    @club=Club.find(params[:id])
+  end
+
+  def destroy #Process delete record form
+    club = Club.find(params[:id])
+    club.destroy
+    flash[:notice] = "Club Information destroyed."
+    redirect_to(:action => 'list')
   end
 end

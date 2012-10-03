@@ -69,7 +69,6 @@ ActiveRecord::Schema.define(:version => 20120914300906) do
   end
 
   create_table "newsletters", :force => true do |t|
-    t.string "title"
     t.text "header"
     t.text "footer"
     t.text "content", :null => false
@@ -78,8 +77,6 @@ ActiveRecord::Schema.define(:version => 20120914300906) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  add_index "newsletters", ["title"], :name => "index_newsletters_on_title"
 
   create_table "pages", :force => true do |t|
     t.integer "subject_id"

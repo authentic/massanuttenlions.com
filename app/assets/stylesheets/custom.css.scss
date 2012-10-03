@@ -52,8 +52,8 @@
 /* header */
 .head-title {
   color: #fdcd19;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 36px;
+  font-family: 'Vollkorn', sans-serif;
+
   text-align: center;
   padding-top: 4px;
 }
@@ -258,5 +258,12 @@ ins.i i {
 ins.i:hover i {
   top: -20px;
   margin-left: 0%;
+}
+
+.hrLion {
+  margin: 10px 0px 10px 0px;
+  border-top-style: solid;
+  border-top-width: medium;
+  border-top-color: #a52a2a;
 }
 

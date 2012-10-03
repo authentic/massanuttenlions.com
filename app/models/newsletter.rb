@@ -3,7 +3,7 @@ class Newsletter < ActiveRecord::Base
   # attr_accessible :title, :body
   validates_presence_of :period
   validates_uniqueness_of :period
-
+  attr_accessible :header, :footer, :content, :visible, :period
   scope :visible, where(:visible => true)
   scope :invisible, where(:visible => false)
   scope :sorted, order('newsletters.month ASC')

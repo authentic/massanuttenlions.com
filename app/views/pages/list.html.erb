@@ -40,7 +40,7 @@
     </thead>
     <tbody>
     <% @pages.each do |page| %>
-        <tr class="<%= cycle('odd', 'even') %>">
+        <tr>
           <td><%= page.position %></td>
           <td><%= page.name %></td>
           <td><%= status_tag(page.visible) %></td>
