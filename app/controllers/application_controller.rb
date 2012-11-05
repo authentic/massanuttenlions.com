@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
     @advertising_section=Page.find_by_id(76)
   end
 
+
   protected
   def layout_by_resource
     if controller_name == 'registrations' && action_name == 'new'

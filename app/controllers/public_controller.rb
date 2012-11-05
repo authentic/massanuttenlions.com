@@ -1,7 +1,6 @@
 class PublicController < ApplicationController
   layout 'application'
 
-
   def index
 
   end
@@ -11,5 +10,7 @@ class PublicController < ApplicationController
     redirect_to(:controller => "static_pages", :action => 'home') unless @page
     @advertising_section=Page.find(76)
   end
+
+
 
 end

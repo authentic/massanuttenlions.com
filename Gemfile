@@ -9,13 +9,16 @@ gem "ckeditor"
 gem "devise"
 gem "cancan"
 gem "paperclip", "~> 2.7.0"
-gem "omniauth", "~> 001.001.0"
+
 gem "simple_form", "~> 2.0.2"
 gem "will_paginate", "~> 3.0.3"
-gem "google-api-client", "~> 0.4.4", :require => 'google/api_client'
+gem "google_calendar", "~> 0.2.2"
+gem "omniauth", "~> 1.1.1"
+gem "omniauth-google-oauth2", "~> 0.1.13"
 gem 'json'
 gem "octokit"
 gem 'mercury-rails'
+
 group :development do
   gem 'mysql2'
   gem 'guard-rspec', '0.5.5'
@@ -62,3 +65,6 @@ group :test do
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
 end
+
+gem 'execjs'
+gem 'therubyracer', :require => 'execjs'

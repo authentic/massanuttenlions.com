@@ -1,9 +1,7 @@
 class NewslettersController < ApplicationController
-  #require 'rubygems'
-  #require 'data_mapper'
-  require 'google/api_client'
-  require 'logger'
-  CALLBACK_URL = "http://localhost:3000/oauth/callback"
+  require 'rubygems'
+  require 'yaml'
+  require 'google_calendar'
   before_filter :authenticate_user!, :except => [:index]
   before_filter :admin_user, :except => [:index]
   before_filter :advertising
@@ -11,7 +9,11 @@ class NewslettersController < ApplicationController
 
 
   def index
-
+    oauth_yaml = YAML.load_file('.google-api.yaml')
+    @cal = Google::Calendar.new(:username => oauth_yaml["username"],
+                               :password => oauth_yaml["password"],
+                               :app_name => oauth_yaml["app_name"],
+                               :calendar => oauth_yaml["calendar"])
     @newsletter= Newsletter.order('newsletters.period ASC').where(:visible => true).last
     @club=Club.last
 

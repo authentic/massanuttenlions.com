@@ -10,12 +10,14 @@ MassanuttenlionsCom::Application.routes.draw do
   end
 
   mount Mercury::Engine => '/'
-  resources :pages, :except => [:edit, :index, :list, :new, :show, :destroy, :delete] do
+  resources :pages, :except => [ :index, :new, :create, :show, :edit, :update, :list,  :destroy, :delete] do
     member { post :mercury_update }
   end
   resources :subjects, :except => :destroy
   match 'admin', :to => 'access#menu'
   match 'show/:id', :to => 'public#show'
+  match '/auth/:provider/callback', :to => 'sessions#create'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -75,4 +77,5 @@ MassanuttenlionsCom::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   match ':controller(/:action(/:id))(.:format)'
+
 end
