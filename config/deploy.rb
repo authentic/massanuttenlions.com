@@ -1,4 +1,4 @@
-require 'bundler/capistrano'
+
 
 
 
@@ -13,9 +13,9 @@ set :deploy_to, "/home/massanut/#{application}"
 #############################################################
 
 default_run_options[:pty] = true
-set :use_sudo, true
+set :use_sudo, false
 ssh_options[:port] = 7822
-ssh_options[:keys] = %w(~/.ssh/id_dsa)
+ssh_options[:keys] = %w(~/.ssh/id_rsa)
 set :scm_verbose, true
 
 #############################################################
