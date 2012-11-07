@@ -83,5 +83,5 @@ MassanuttenlionsCom::Application.configure do
   }
 
   config.assets.precompile += Ckeditor.assets
-  config.assets.precompile += %w( print.css admin.js )
+  config.assets.precompile += %w( 'print.css', 'admin.js' )
 end
