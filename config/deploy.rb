@@ -1,4 +1,4 @@
-
+require "bundler/capistrano"
 
 
 
@@ -27,6 +27,7 @@ set :domain, "massanut.www76.a2hosting.com"
 role :web, domain
 role :app, domain
 role :db, domain, :primary => true
+set :bundle_cmd, 'source $HOME/.bash_profile && bundle'
 
 #############################################################
 #	Git

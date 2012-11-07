@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
-
+gem 'mysql2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'simple-navigation-bootstrap'
@@ -9,7 +9,6 @@ gem "ckeditor"
 gem "devise"
 gem "cancan"
 gem "paperclip", "~> 2.7.0"
-
 gem "simple_form", "~> 2.0.2"
 gem "will_paginate", "~> 3.0.3"
 gem "google_calendar", "~> 0.2.2"
@@ -20,7 +19,6 @@ gem "octokit"
 gem 'mercury-rails'
 
 group :development do
-  gem 'mysql2'
   gem 'guard-rspec', '0.5.5'
   gem 'rspec-rails', '2.10.0'
   gem 'annotate', '2.5.0'
