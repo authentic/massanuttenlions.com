@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :roles, :through => :assignments
   #accepts_nested_attributes_for :roles, :allow_destroy=>true
 
-  has_attached_file :avatar, :styles => {:small => "X100", :medium => "X160", :large => "300x", :thumb => "70x"}, :url => "/assets/users/:id_partition/:style/:basename.:extension", :path => ":rails_root/public/assets/users/:id_partition/:style/:basename.:extension"
+  has_attached_file :avatar, :styles => {:small => "X100", :medium => "X160", :large => "300x", :thumb => "70x"}, :url => "/paperclip_assets/users/:id_partition/:style/:basename.:extension", :path => ":rails_root/public/paperclip_assets/users/:id_partition/:style/:basename.:extension"
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

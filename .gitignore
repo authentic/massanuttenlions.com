@@ -26,7 +26,7 @@ spec/
 .sass-cache/
 *.sassc
 bundler_stubs/
-.google-api.yaml
+#.google-api.yaml
 *.rbc
 capybara-*.html
 .rspec
