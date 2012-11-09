@@ -318,9 +318,9 @@ var GalleryItem = $.inherit(
 
         getBigSrc:function () {
             var bigPath = this.jPic.attr('src');
-            var url_begin = bigPath.substr(0, 26);
+            var url_begin = bigPath.substr(0, 36);
             var medium_part = "medium/"
-            var url_end = bigPath.substr(32);
+            var url_end = bigPath.substr(42);
             var all = url_begin.concat(medium_part, url_end);
             return all;
         },
