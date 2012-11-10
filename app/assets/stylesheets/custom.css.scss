@@ -17,6 +17,13 @@
   padding-left: 200px; /* "left col" width */
   padding-right: 200px; /* "right col" width */
 }
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1366px;
+  min-width: 950px;
+}
+.footer{font-style: italic;}
 
 .lion-menu {
   background: url(Lion-menu.png) no-repeat;
@@ -48,19 +55,9 @@
   width: 450px;
   margin: 0 auto;
 }
-
-/* header */
-.head-title {
-  color: #fdcd19;
-  font-family: 'Vollkorn', sans-serif;
-
-  text-align: center;
-  padding-top: 4px;
-}
-
 .logo {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 5px;
+  padding-bottom: 2px;
 }
 
 /* header */
@@ -265,12 +262,5 @@ ins.i:hover i {
   border-top-style: solid;
   border-top-width: medium;
   border-top-color: #a52a2a;
-}
-
-body{
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1600px;
-  min-width: 950px;
 }
 

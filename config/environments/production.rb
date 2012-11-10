@@ -83,5 +83,5 @@ MassanuttenlionsCom::Application.configure do
   }
 
   config.assets.precompile += Ckeditor.assets
-  config.assets.precompile += ['admin.js', 'calendar.js', 'print.css']
+  config.assets.precompile += ['admin.js', 'calendar.js', 'print.css', 'calendar.css', 'mercury.css', 'jquery-1.7.js']
 end

@@ -5,9 +5,9 @@
         <td width="70%"><h1 class='newsletter'> Mountain Lion <%= @newsletter.period.strftime("%B %Y") %></h1>
 
 
-          <p><strong><%= @club.name %></strong> <br> <%= @club.mailing_address %> </p>
+          <div><strong><%= @club.name %></strong> <br> <%= @club.mailing_address %> </div>
 
-          <small>
+          <div>
             <% if @president %>
                 <em><strong>President:</strong></em> <%= @president.signature %>
                 <a href='mailto:#' target='_blank'> <%= @club.president_email %></a><br>
@@ -24,7 +24,7 @@
                 <em><strong>Photographer:</strong></em> <%= @photographer.signature %>
                 <a href='mailto:#' target='_blank'> <%= @club.photographer_email %></a><br>
             <% end %>
-          </small>
+          </div>
         </td>
         <td width="30%">
           <img alt='Mountain Lion' src='/ckeditor_assets/pictures/79/content_logonewsletter1.jpg?1348861857' class='img-circle'>

@@ -44,7 +44,6 @@ SimpleNavigation::Configuration.run do |navigation|
 
 
         sub_nav.item :charities_supported, 'Charities Supported', '/show/charities_supported' do |sub_sub_nav|
-          sub_sub_nav.item :uganda_well_pumps, 'Uganda Well Pumps', '/show/uganda_well_pumps'
           sub_sub_nav.item :charities_christmas_in_january, 'Christmas In January', '/show/charities_christmas_in_january'
           sub_sub_nav.item :massanutten_lions_club_james_martin_memorial_scholarship, 'Massanutten Lions Club James Martin Memorial Scholarship', '/show/massanutten_lions_club_james_martin_memorial_scholarship'
           sub_sub_nav.item :blue_ridge_food_bank, 'Blue Ridge Food Bank', '/show/blue_ridge_food_bank'
