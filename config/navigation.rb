@@ -95,7 +95,7 @@ SimpleNavigation::Configuration.run do |navigation|
       primary.item :contact_us, 'Contact Us', '/contacts/contact_us' do |sub_nav|
         sub_nav.item :club_president, 'Club President', '/contacts/president'
         sub_nav.item :webmaster, 'Webmaster', '/contacts/webmaster'
-        sub_nav.item :feedback, 'Feedback', '/contacts/feedback'
+       # sub_nav.item :feedback, 'Feedback', '/contacts/feedback'
 
       end
 
