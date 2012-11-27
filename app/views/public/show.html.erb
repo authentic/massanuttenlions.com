@@ -12,12 +12,12 @@
   <% if user_signed_in? %>
       <% if current_user.has_role? :admin %>
           <%= link_to("/editor" + request.path, :id => "edit_link", :data => {:save_url => mercury_update_page_path(@page)}, :class => "btn btn-mini btn-primary") do %>
-              <i class="icon-pencil"></i> Edit Page With Mercury
-          <% end %>
+              <i class="icon-pencil"></i> Quick Edit
+<% end %>
 
 
           <%= link_to({:controller => 'pages', :action => 'edit', :id => @page.id, :subject_id => @page.subject_id}, :class => "btn btn-mini btn-primary") do %>
-              <i class="icon-pencil"></i> Edit Page With Ckeditor
+              <i class="icon-pencil"></i> Edit Page
           <% end %>
           <hr>
       <% end %>
