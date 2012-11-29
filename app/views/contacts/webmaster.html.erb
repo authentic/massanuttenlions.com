@@ -8,9 +8,9 @@
     <ul class="thumbnails">
       <% @webmaster.each do |webmaster| %>
           <li>
-            <div class="thumbnail">
+            <div class="thumbnail center leadership">
               <%= image_tag webmaster.avatar.url(:medium) %>
-              <h5><%= webmaster.signature %> </h5>
+              <h6><%= webmaster.signature %> </h6>
             </div>
           </li>
 

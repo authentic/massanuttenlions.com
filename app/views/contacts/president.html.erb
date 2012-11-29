@@ -5,9 +5,9 @@
       <h1>Club President <%= @club.current_year %></h1></div>
     <ul class="thumbnails">
       <li>
-        <div class="thumbnail">
-          <%= image_tag @president.avatar.url(:large) %>
-          <h4><%= @president.signature %></h4>
+        <div class="thumbnail center leadership">
+          <%= image_tag @president.avatar.url(:medium) %>
+          <h6><%= @president.signature %></h6>
         </div>
       </li>
     </ul>
