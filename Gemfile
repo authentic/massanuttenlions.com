@@ -8,7 +8,7 @@ gem 'simple-navigation-bootstrap'
 gem "ckeditor", "3.7.3"
 gem "devise"
 gem "cancan"
-gem "paperclip", "~> 2.7.0"
+gem "paperclip", "~> 2.7.4"
 gem "simple_form", "~> 2.0.2"
 gem "will_paginate", "~> 3.0.3"
 gem "google_calendar", "~> 0.2.2"
