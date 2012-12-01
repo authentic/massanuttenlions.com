@@ -5,7 +5,7 @@ gem 'mysql2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'simple-navigation-bootstrap'
-gem "ckeditor"
+gem "ckeditor", "3.7.3"
 gem "devise"
 gem "cancan"
 gem "paperclip", "~> 2.7.0"
@@ -17,6 +17,7 @@ gem "omniauth-google-oauth2", "~> 0.1.13"
 gem 'json'
 gem "octokit"
 gem 'mercury-rails'
+
 
 group :development do
   gem 'guard-rspec', '0.5.5'

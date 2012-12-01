@@ -259,7 +259,7 @@ DEPENDENCIES
   cancan
   capistrano
   capybara (= 001.001.2)
-  ckeditor
+  ckeditor (= 3.7.3)
   coffee-rails (= 3.2.2)
   devise
   execjs

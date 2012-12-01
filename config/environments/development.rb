@@ -52,5 +52,5 @@ MassanuttenlionsCom::Application.configure do
       :password => "5346Trevino"
   }
 
-  Paperclip.options[:command_path] = "/usr/bin/convert"
+  Paperclip.options[:command_path] = "usr/bin"
 end
