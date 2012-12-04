@@ -42,6 +42,15 @@ set :deploy_via, :remote_cache
 #############################################################
 #	Passenger
 #############################################################
+# in RAILS_ROOT/config/deploy.rb:
+after 'deploy:update_code', 'deploy:symlink_db'
+
+namespace :deploy do
+  desc "Symlinks the database.yml"
+  task :symlink_db, :roles => :app do
+    run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
+  end
+end
 
 namespace :deploy do
   task :start do ; end

@@ -19,14 +19,14 @@ doc/
 *~
 .project
 .DS_Store
-#config/database.yml
+config/database.yml
 .idea/
 spec/
 /spec/tmp/*
 .sass-cache/
 *.sassc
 bundler_stubs/
-#.google-api.yaml
+.google-api.yaml
 *.rbc
 capybara-*.html
 .rspec
