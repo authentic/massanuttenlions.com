@@ -37,3 +37,4 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 /public/precompile
+/public/ckeditor_assets/**/**/*
