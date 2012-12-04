@@ -38,3 +38,4 @@ rerun.txt
 pickle-email-*.html
 /public/precompile
 /public/ckeditor_assets/**/**/*
+/public/paperclip_assets/**/**/**/**/**/*
