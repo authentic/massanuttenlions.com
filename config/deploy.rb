@@ -42,22 +42,21 @@ set :deploy_via, :remote_cache
 #############################################################
 #	Passenger
 #############################################################
-# in RAILS_ROOT/config/deploy.rb:
-after 'deploy:update_code', 'deploy:symlink_db'
-
-namespace :deploy do
-  desc "Symlinks the database.yml and .google-api.yaml"
-  task :symlink_db, :roles => :app do
-    run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
-    run "ln -nfs #{deploy_to}/shared/config/.google-api.yaml #{release_path}/.google-api.yaml"
-  end
-end
-
 namespace :deploy do
   task :start do ; end
   task :stop do ; end
-  task :restart, :roles => :app, :except => { :no_release => true } do
+  task :restart, :role => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+end
+after 'deploy:update_code', 'deploy:symlink_config'
+namespace :deploy do
+  desc "Symlinks the database.yml and .google-api.yaml"
+  task :symlink_config, :role => :app do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/.google-api.yaml #{release_path}/.google-api.yaml"
+    run "ln -s #{shared_path}/ckeditor_assets #{release_path}/public/ckeditor_assets"
+    run "ln -s #{shared_path}/paperclip_assets #{release_path}/public/paperclip_assets"
   end
 end
 

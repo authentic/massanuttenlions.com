@@ -16,7 +16,7 @@
     <% end %>
   </li>
 </ul>
-<%= simple_form_for(@newsletter, :url => {:action => 'update', :id => @newsletter.id}) do |f| %>
+<%= simple_form_for(@newsletter, :url => {:action => 'update', :id => @newsletter.id}, :html => {:multipart => true, :class => "form-horizontal"}) do |f| %>
     <%= f.error_notification %>
 
     <fieldset>

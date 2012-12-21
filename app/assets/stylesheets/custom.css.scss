@@ -196,15 +196,19 @@ span.home-nav {
 
 #gallery .showcase .name {
   color: #b45900;
-  font-size: 90%;
-  margin: 10px 10px 0 14px;
+  font-size: 80%;
+  font-weight: bold;
+  margin: 5px 5px 0 5px;
+  line-height: 120%;
+
 }
 
 #gallery .showcase .post {
   color: #0d0b5a;
   font-size: 70%;
   font-style: italic;
-  margin: 10px 10px 10px 14px;
+  margin: 5px 5px 5px 5px;
+  line-height: 120%;
 }
 
 #gallery .showcase ins.i {
