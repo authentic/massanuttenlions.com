@@ -49,6 +49,7 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
+
 after 'deploy:update_code', 'deploy:symlink_config'
 namespace :deploy do
   desc "Symlinks the database.yml and .google-api.yaml"

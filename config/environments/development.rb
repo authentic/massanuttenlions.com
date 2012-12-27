@@ -53,4 +53,5 @@ MassanuttenlionsCom::Application.configure do
   }
 
   Paperclip.options[:command_path] = "/usr/bin/convert"
+
 end
