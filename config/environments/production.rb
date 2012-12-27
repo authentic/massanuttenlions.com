@@ -85,5 +85,5 @@ MassanuttenlionsCom::Application.configure do
   config.assets.precompile += Ckeditor.assets
   config.assets.precompile += ['admin.js', 'calendar.js', 'print.css', 'calendar.css', 'mercury.css', 'jquery-1.7.js', 'mercury_override.js','mercury.js']
   Paperclip.options[:command_path] = "/usr/bin/convert"
-  Paperclip.registered_attachments_styles_path = "#{shared_path}/ckeditor_assets/paperclip_attachments.yml"
+  Paperclip.registered_attachments_styles_path = "/home/massanut/massanuttenlions/shared/ckeditor_assets/paperclip_attachments.yml"
 end
