@@ -13,22 +13,23 @@
   </li>
   <li>
     <%= link_to(root_path, :class => "btn-primary") do %>
-        <i class="icon-home icon-white"></i> Site Home
+        <i class="icon-home"></i> Site Home
     <% end %>
   </li>
 
 </ul>
 
-<%= form_for(:club, :url => {:action => 'update', :id => @club.id}, :html => {:class => "form-horizontal"}) do |f| %>
+<%= simple_form_for(@club, :url => {:action => 'update', :id => @club.id}, :html => {:multipart => true, :class => "form-horizontal"}) do |f| %>
     <div class="well span6 offset3">
 
       <fieldset>
-        <legend><%= "Update Club Information".upcase %></legend>
+        <legend>Update Club Information</legend>
         <%= render(:partial => "form", :locals => {:f => f}) %>
-        <div class="control-group">
-          <div class="controls">
-            <%= f.submit "Update Club Information", :class => "btn-large" %>
-          </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Update Club Information", :class => "btn btn-large" %>
+          <%= link_to({:controller => 'club', :action => 'list'}, :class => 'btn btn-large') do %>
+              Cancel
+          <% end %>
         </div>
       </fieldset>
     </div>

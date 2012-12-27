@@ -2,31 +2,34 @@
 <ul class="nav nav-pills">
   <li>
     <%= link_to({:controller => 'access', :action => 'menu'}, :class => "btn-primary") do %>
-        <i class="icon-home icon-white"></i> Admin Home
+        <i class="icon-home"></i> Admin Home
     <% end %>
   </li>
   <li>
     <%= link_to({:action => 'list'}, :class => "btn-primary") do %>
-        <i class="icon-th-list icon-white"></i> Club Information
+        <i class="icon-th-list"></i> Club Information
     <% end %>
   </li>
   <li>
     <%= link_to(root_path, :class => "btn-primary") do %>
-        <i class="icon-home icon-white"></i> Site Home
+        <i class="icon-home"></i> Site Home
     <% end %>
   </li>
-
 </ul>
 
-<%= form_for(:club, :url => {:action => 'create'}, :html => {:class => "form-horizontal"}) do |f| %>
-
+<%= simple_form_for(@club, :url => {:action => 'create'}, :html => {:multipart => true, :class => "form-horizontal"}) do |f| %>
+    <%= f.error_notification %>
     <div class="well span6 offset3">
       <fieldset>
         <legend>Insert Club Information</legend>
-        <%= render(:partial => "form", :locals => {:f => f}) %>
-        <div class="control-group">
-          <div class="controls">
-            <%= f.submit "Create Club", :class => "btn-large" %></div>
+        <div class="form-inputs">
+          <%= render(:partial => "form", :locals => {:f => f}) %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Create Club", :class => "btn btn-large" %>
+          <%= link_to({:controller => 'club', :action => 'list'}, :class => 'btn btn-large') do %>
+              Cancel
+          <% end %>
         </div>
       </fieldset>
 <% end %>

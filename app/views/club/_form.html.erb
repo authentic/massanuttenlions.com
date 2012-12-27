@@ -1,107 +1,27 @@
-<%= error_messages_for(@club) %>
+<%= f.input :current_year, :label=>'Current Year:', :autofocus => true %>
+<%= f.input :name, :label => 'Club Name:' %>
+<%= f.input :meeting_address, :label => 'Meeting Address:' %>
+<%= f.input :mailing_address, :label => 'Mailing Address:' %>
+<%= f.input :city, :label => 'City:' %>
+<%= f.input :postal_code, :label => 'Postal Code:' %>
+<%= f.input :state, :prompt => 'Select State', :label => 'State / region', :collection => ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'] %>
+<%= f.input :email, :label => 'Club Email:' %>
+<%= f.input :president_email, :label => 'President Email:' %>
+<%= f.input :webmaster_email, :label => 'Webmaster Email:' %>
+<%= f.input :newsletter_editor_email, :label => 'Newsletter Editor Email:' %>
+<%= f.input :secretary_email, :label => 'Secretary Email:' %>
+<%= f.input :photographer_email, :label => 'Photographer Email:' %>
+<%= f.input :phone, :hint => "(000) 000-0000", :label=> 'Phone:' %>
 
 
-<div class="control-group">
-  <%= f.label "Club Name:", :class => "control-label" %>
-  <div class="controls">
-    <%= f.text_field :name, :class => "input-large" %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label "Meeting Address:", :class => "control-label" %>
-  <div class="controls">
-    <%= f.text_field :meeting_address %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label "Mailing Address:", :class => "control-label" %>
-
-  <div class="controls">
-    <%= f.text_field :mailing_address %>
-  </div>
-
-
-</div>
-<div class="control-group">
-  <%= f.label "City:", :class => "control-label" %>
-  <div class="controls">
-    <%= f.text_field :city %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label "Postal Code:", :class => "control-label", :for => "input12" %>
-  <div class="controls">
-    <%= f.text_field :postal_code %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label "State / Region:", :class => "control-label", :for => "input12" %>
-  <div class="controls">
-    <%= f.select :state, [['Alabama'], ['Alaska'], ['Arizona'], ['Arkansas'], ['California'], ['Colorado'], ['Connecticut'], ['Delaware'], ['Florida'], ['Georgia'], ['Hawaii'], ['Idaho'], ['Illinois'], ['Indiana'], ['Iowa'], ['Kansas'], ['Kentucky'], ['Louisiana'], ['Maine'], ['Maryland'], ['Massachusetts'], ['Michigan'], ['Minnesota'], ['Mississippi'], ['Missouri'], ['Montana'], ['Nebraska'], ['Nevada'], ['New Hampshire'], ['New Jersey'], ['New Mexico'], ['New York'], ['North Carolina'], ['North Dakota'], ['Ohio'], ['Oklahoma'], ['Oregon'], ['Pennsylvania'], ['Rhode Island'], ['South Carolina'], ['South Dakota'], ['Tennessee'], ['Texas'], ['Utah'], ['Vermont'], ['Virginia'], ['Washington'], ['West Virginia'], ['Wisconsin'], ['Wyoming']], :prompt => "Select state", :class => "input-large", :id => "input12" %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label "Club Email:", :class => "control-label", :for => "input02" %>
-  <div class="controls">
-    <%= f.email_field :email, :class => "input-large", :id => "input02" %>
-  </div>
-</div>
-
-<div class="control-group">
-  <%= f.label "President Email:", :class => "control-label", :for => "input02" %>
-  <div class="controls">
-    <%= f.email_field :president_email, :class => "input-large", :id => "input02" %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label "Webmaster Email:", :class => "control-label", :for => "input02" %>
-  <div class="controls">
-    <%= f.email_field :webmaster_email, :class => "input-large", :id => "input02" %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label "Newsletter Editor Email:", :class => "control-label", :for => "input02" %>
-  <div class="controls">
-    <%= f.email_field :newsletter_editor_email, :class => "input-large", :id => "input02" %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label "Secretary Email:", :class => "control-label", :for => "input02" %>
-  <div class="controls">
-    <%= f.email_field :secretary_email, :class => "input-large", :id => "input02" %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label "Photographer Email:", :class => "control-label", :for => "input02" %>
-  <div class="controls">
-    <%= f.email_field :photographer_email, :class => "input-large", :id => "input02" %>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label "Phone:", :class => "control-label", :for => "input12" %>
-  <div class="controls">
-    <%= f.text_field :phone, :class => "input-large", :id => "input12" %>
-    <p>(000) 000-0000</p>
-  </div>
-</div>
-<div class="control-group">
-  <%= f.label "Current year:", :class => "control-label", :for => "input12" %>
-  <div class="controls">
-    <%= f.text_field :current_year %>
-  </div>
-</div>
 <fieldset>
   <legend>Board of Directors Photo</legend>
   <div class="control-group">
-    <%= f.label "Upload a file:", :class => "control-label", :for => "input12" %>
+    <%= f.label "Upload a file:", :class => "control-label" %>
     <div class="controls">
-      <%= f.file_field :avatar, :class => "input-large", :id => "input12" %>
+      <%= f.file_field :avatar, :class => "input-large" %>
     </div>
   </div>
 
-
 </fieldset>
+<hr>

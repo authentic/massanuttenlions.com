@@ -25,6 +25,11 @@
       <tbody>
       <% @clubs.each do |club| %>
           <tr>
+            <th>Current year:</th>
+            <td><strong><%= club.current_year %></strong></td>
+          </tr>
+
+          <tr>
 
             <th width="180">Club Name:</th>
             <td><%= club.name %></td>
@@ -74,10 +79,6 @@
             <td><%= club.phone %></td>
           </tr>
 
-          <tr>
-            <th>Current year:</th>
-            <td><%= club.current_year %></td>
-          </tr>
 
           <tr>
             <th>Board of Directors Photo:</th>
@@ -101,6 +102,7 @@
       </tbody>
 
     </table>
+    <hr>
   </div>
 
 </div>
