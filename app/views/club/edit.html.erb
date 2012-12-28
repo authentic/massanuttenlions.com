@@ -19,7 +19,7 @@
 
 </ul>
 
-<%= simple_form_for(@club, :url => {:action => 'update', :id => @club.id}, :html => {:multipart => true, :class => "form-horizontal"}) do |f| %>
+<%= simple_form_for(@club, :url => {:controller=>'club',:action => 'update', :id => @club.id}, :html => {:multipart => true, :class => "form-horizontal"}) do |f| %>
     <div class="well span6 offset3">
 
       <fieldset>
