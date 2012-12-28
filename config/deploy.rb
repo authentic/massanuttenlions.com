@@ -60,14 +60,16 @@ namespace :deploy do
 
   end
 
-  #desc "build missing paperclip styles"
-  #task :build_missing_paperclip_styles, :roles => :app do
-  #  run "cd #{release_path}; RAILS_ENV=production bundle exec rake paperclip:refresh:missing_styles"
-  #end
+
+
+ desc "build missing paperclip styles"
+ task :build_missing_paperclip_styles, :roles => :app do
+   run "cd #{release_path}; RAILS_ENV=production bundle exec rake paperclip:refresh:missing_styles"
+ end
   #
   #desc "Sync the public/ckeditor_assets directory."
   #task :assets do
   #  system "rsync -vr --exclude='.DS_Store' public/ckeditor_assets #{user}@#{application}:#{shared_path}/"
   #end
 end
-after 'deploy:update_code', 'deploy:symlink_config_shared'#, 'deploy:build_missing_paperclip_styles'
+after 'deploy:update_code', 'deploy:symlink_config_shared', 'deploy:build_missing_paperclip_styles'
