@@ -44,7 +44,6 @@ class ClubController < ApplicationController
   def update
     #Find object using form parameters
     @club=Club.find(params[:id])
-    logger.debug('f')
     #Update the object
     if @club.update_attributes(params[:club])
       #If update succeeds, redirect to the list action
