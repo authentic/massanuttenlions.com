@@ -17,7 +17,7 @@
   </li>
 </ul>
 
-<%= simple_form_for(@club, :url => {:action => 'create'}, :html => {:multipart => true, :class => "form-horizontal"}) do |f| %>
+<%= simple_form_for(@club, :url => {:controller=>'club',:action => 'create'}, :html => {:multipart => true, :class => "form-horizontal"}) do |f| %>
     <%= f.error_notification %>
     <div class="well span6 offset3">
       <fieldset>
