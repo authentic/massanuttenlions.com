@@ -24,11 +24,11 @@
 
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="yui3-g" id="layout">
-      <div class="yui3-u" id="nav">
+    <div class="yui3-g" id="layout_cal">
+      <div class="yui3-u" id="nav_cal">
         <div class="lion-menu "><%= render_navigation :level => 2..3 %></div>
       </div>
-      <div class="yui3-u" id="main">
+      <div class="yui3-u" id="main_cal">
         <div class="content">  <%= render 'layouts/messages' %>
           <%= render_navigation :renderer => :breadcrumbs, :join_with => " &gt; ", :static_leaf => true %>
 
@@ -38,7 +38,7 @@
 
         </div>
       </div>
-      <div class="yui3-u " id="extra"></div>
+      <!--<div class="yui3-u " id="extra"></div>-->
     </div>
   </div>
 
