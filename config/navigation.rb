@@ -89,7 +89,6 @@ SimpleNavigation::Configuration.run do |navigation|
         sub_nav.item :bingo_schedule, 'Bingo Schedule', '/show/bingo_schedule'
         sub_nav.item :project_read_schedule, 'Project Read Schedule', '/show/project_read_schedule'
         sub_nav.item :phone_book, 'Phone Book', '/phone_book/show', :if => Proc.new { user_signed_in? }
-        sub_nav.item :members_information, 'Members Information', '/members_information/show', :if => Proc.new { user_signed_in? }
         sub_nav.item :budget, 'Budget', '/show/budget', :if => Proc.new { user_signed_in? }
       end
       primary.item :contact_us, 'Contact Us', '/contacts/contact_us' do |sub_nav|

@@ -14,7 +14,7 @@ class PhoneBookController < ApplicationController
   private
 
   def sort_column
-    User.column_names.include?(params[:sort]) ? params[:sort] : "first_name"
+    User.column_names.include?(params[:sort]) ? params[:sort] : "last_name"
   end
 
   def sort_direction
