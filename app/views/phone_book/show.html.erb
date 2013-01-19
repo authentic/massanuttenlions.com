@@ -8,19 +8,19 @@
 <table class="table table-hover table-bordered table-striped table-condensed">
   <thead>
   <tr>
-    <th><%= link_to "Last Name", :sort => "last_name" %>  <%= link_to "First Name", :sort => "first_name" %></th>
-    <th><%= link_to "Email", :sort => "email" %></th>
-    <th><%= link_to "Phone", :sort => "phone" %></th>
-    <th><%= link_to "Avatar", :sort => "avatar" %></th>
+    <th style="text-align: center;vertical-align: middle; "><%= link_to "First Name", :sort => "first_name" %> / <%= link_to "Last Name", :sort => "last_name" %> </th>
+    <th style="text-align: center;vertical-align: middle; "><%= link_to "Address", :sort => "street" %> / <%= link_to "Email", :sort => "email" %></th>
+    <th style="text-align: center;vertical-align: middle; "><%= link_to "Phone", :sort => "phone" %>/<%= link_to "Birthday", :sort => "birthday" %></th>
+    <th></th>
   </tr>
   </thead>
   <tbody>
   <% @users.each do |user| %>
       <tr>
-        <td><%= user.last_name+' '+user.first_name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.phone %></td>
-        <td><%= image_tag user.avatar.url(:thumb), :size => '40x40' %></td>
+        <td><%= user.first_name+' '+user.last_name %><br> <em><small><%= user.leadership!= 'Non' ? user.leadership : '' %><%=  user.officers!= 'Non' ? ', '+user.officers : '' %></small></em></td>
+        <td><%= user.house_number+' '+user.street+', '+user.city+', '+user.state+', '+user.postal_code %> <br><a href='mailto:#' target='_blank'><%= user.email %></a></td>
+        <td><%= user.phone %><br><%= user.birthday.strftime("%B %d") %></td>
+        <td><%= image_tag user.avatar.url(:thumb), :size => '30x30' %></td>
 
       </tr>
   <% end %>
