@@ -29,15 +29,14 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails', '3.2.5'
-
+  gem 'coffee-rails', '3.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
   gem 'twitter-bootstrap-rails', '2.1.4'
-
+  gem 'uglifier', '1.2.3'
 end
-gem 'coffee-rails', '3.2.2'
-gem 'uglifier', '1.2.3'
+
 gem 'jquery-rails'
 
 
