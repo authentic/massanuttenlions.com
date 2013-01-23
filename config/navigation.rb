@@ -76,7 +76,14 @@ SimpleNavigation::Configuration.run do |navigation|
 
       end
       primary.item :news_and_information, 'News And Information', '/show/news_and_information' do |sub_nav|
-        sub_nav.item :club_newsletters, 'Club Newsletters', '/newsletters/index'
+        sub_nav.item :club_newsletters, 'Club Newsletters', '/newsletters/index' do |sub_sub_nav|
+          sub_sub_nav.item :archives, 'Archive', '/show/archive_of_newsletters' do |sub_sub_sub_nav|
+            newsletters=Newsletter.order('newsletters.period DESC').where(:visible => true)
+            newsletters.each do |newsletter|
+              sub_sub_sub_nav.item :"#{newsletter.period}", "Newsletter #{newsletter.period.strftime('%B %Y')}", "/newsletters/archive/#{newsletter.id}"
+            end
+          end
+        end
         sub_nav.item :newsroom, 'Newsroom', '/show/newsroom'
         sub_nav.item :conferences_and_forms, 'Forms', '/show/conferences_and_forms'
         sub_nav.item :how_to_become_a_club_member, 'Membership', '/show/how_to_become_a_club_member'
@@ -91,10 +98,21 @@ SimpleNavigation::Configuration.run do |navigation|
         sub_nav.item :phone_book, 'Phone Book', '/phone_book/show', :if => Proc.new { user_signed_in? }
         sub_nav.item :budget, 'Budget', '/show/budget', :if => Proc.new { user_signed_in? }
       end
+
+
       primary.item :contact_us, 'Contact Us', '/contacts/contact_us' do |sub_nav|
         sub_nav.item :club_president, 'Club President', '/contacts/president'
         sub_nav.item :webmaster, 'Webmaster', '/contacts/webmaster'
-       # sub_nav.item :feedback, 'Feedback', '/contacts/feedback'
+        # sub_nav.item :feedback, 'Feedback', '/contacts/feedback'
+
+        #
+        #subjects ||= []
+        #subjects.each do |subject|
+        #  subject.name
+        #  subject.newsletters.visible.sorted.each do |page|
+        #    link_to_unless_current(page.name, :action => 'show', :id => page.permalink)
+        #  end
+        #end
 
       end
 

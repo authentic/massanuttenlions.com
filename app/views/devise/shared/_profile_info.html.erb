@@ -20,7 +20,7 @@
     <fieldset>
       <legend>Club Status</legend>
       <%= f.input :status, :label => 'Club Status', :collection => ['Active', 'Non'], :as => :radio_buttons %>
-      <%= f.input :leadership, :prompt => 'Select Leadership Post', :label => 'Leadership', :collection => ['Non', 'President', 'First Vice President', 'Second Vice President', 'Third Vice President', 'Secretary', 'Treasure', 'Lion Tamer', 'Tail Twister', 'Membership Chair', 'Director 1 Year', 'Director 2 Year', 'Past President'] %>
+      <%= f.input :leadership, :prompt => 'Select Leadership Post', :label => 'Leadership', :collection => ['Non', 'President', 'First Vice President', 'Second Vice President', 'Third Vice President', 'Secretary', 'Treasurer', 'Lion Tamer', 'Tail Twister', 'Membership Chair', 'Director 1 Year', 'Director 2 Year', 'Past President'] %>
       <%= f.input :officers, :prompt => 'Select Officers Post', :label => 'Officers', :collection => ['Non', 'President', 'Vice President', 'Secretary', 'Treasurer', 'Director'] %>
       <%= f.input :webmaster, :collection => ['Webmaster', 'Non'], :as => :radio_buttons %>
       <%= f.input :newsletter_editor, :collection => ['Editor', 'Non'], :as => :radio_buttons %>

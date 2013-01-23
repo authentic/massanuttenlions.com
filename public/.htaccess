@@ -1,3 +1,7 @@
 SetEnv GEM_HOME /home/massanut/ruby/gems
 PassengerEnabled On
 PassengerAppRoot /home/massanut/massanuttenlions/current
+<IfModule mod_security.c>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</IfModule>

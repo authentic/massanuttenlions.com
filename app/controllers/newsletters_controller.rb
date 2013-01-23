@@ -2,8 +2,8 @@ class NewslettersController < ApplicationController
   require 'rubygems'
   require 'yaml'
   require 'google_calendar'
-  before_filter :authenticate_user!, :except => [:index]
-  before_filter :admin_user, :except => [:index]
+  before_filter :authenticate_user!, :except => [:index, :archive]
+  before_filter :admin_user, :except => [:index, :archive]
   before_filter :advertising
   layout :layout_by_resource
 
@@ -18,7 +18,16 @@ class NewslettersController < ApplicationController
     @club=Club.last
 
   end
-
+    def archive
+      oauth_yaml = YAML.load_file('.google-api.yaml')
+      @cal = Google::Calendar.new(:username => oauth_yaml["username"],
+                                  :password => oauth_yaml["password"],
+                                  :app_name => oauth_yaml["app_name"],
+                                  :calendar => oauth_yaml["calendar"])
+      @newsletter= Newsletter.order('newsletters.period ASC').where(:visible => true).last
+      @club=Club.last
+      @newsletter = Newsletter.find(params[:id])
+    end
 
   def list
     @newsletters = Newsletter.order('newsletters.period DESC')
@@ -97,6 +106,8 @@ class NewslettersController < ApplicationController
   protected
   def layout_by_resource
     if controller_name == 'newsletters' && action_name == 'index'
+      'application'
+    elsif controller_name == 'newsletters' && action_name == 'archive'
       'application'
     else
       'admin'

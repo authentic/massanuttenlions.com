@@ -17,7 +17,7 @@
   <tbody>
   <% @users.each do |user| %>
       <tr><td><%= image_tag user.avatar.url(:thumb), :size => '30x30' %></td>
-        <td><%= user.first_name+' '+user.last_name %><br> <em><small><%= user.leadership!= 'Non' ? user.leadership : '' %><%=  user.officers!= 'Non' ? ', '+user.officers : '' %></small></em></td>
+        <td><%= user.first_name+' '+user.last_name %></td>
         <td><%= user.house_number+' '+user.street+', '+user.city+', '+user.state+' '+user.postal_code %> <br><a href='mailto:#' target='_blank'><%= user.email %></a></td>
         <td><%= user.phone %><br><%= user.birthday.strftime("%B %d") %></td>
 
