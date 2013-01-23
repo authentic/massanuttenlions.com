@@ -78,7 +78,7 @@ SimpleNavigation::Configuration.run do |navigation|
       primary.item :news_and_information, 'News And Information', '/show/news_and_information' do |sub_nav|
         sub_nav.item :club_newsletters, 'Club Newsletters', '/newsletters/index' do |sub_sub_nav|
           sub_sub_nav.item :archives, 'Archive', '/show/archive_of_newsletters' do |sub_sub_sub_nav|
-            newsletters=Newsletter.order('newsletters.period DESC').where(:visible => true)
+            newsletters=Newsletter.order('newsletters.period DESC').where(:visible => true).offset(1)
             newsletters.each do |newsletter|
               sub_sub_sub_nav.item :"#{newsletter.period}", "Newsletter #{newsletter.period.strftime('%B %Y')}", "/newsletters/archive/#{newsletter.id}"
             end

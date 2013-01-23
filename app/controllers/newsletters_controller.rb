@@ -24,7 +24,7 @@ class NewslettersController < ApplicationController
                                   :password => oauth_yaml["password"],
                                   :app_name => oauth_yaml["app_name"],
                                   :calendar => oauth_yaml["calendar"])
-      @newsletter= Newsletter.order('newsletters.period ASC').where(:visible => true).last
+
       @club=Club.last
       @newsletter = Newsletter.find(params[:id])
     end
