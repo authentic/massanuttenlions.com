@@ -10,7 +10,7 @@
 <% else %>
     <p class="alert alert-error">No data available!</p>
 <% end %>
-<% if @newsletter.period.to_datetime >=Time.new(2012,6,30, 13,30,0, "+09:00")  %>
+<% if @newsletter.period >=Date.new(2012,6,30)  %>
 
 <h5>COMING EVENTS</h5>
 <p>Please visit our <%= link_to "Calendar", '/calendar' %> for more details on the following coming events:</p>

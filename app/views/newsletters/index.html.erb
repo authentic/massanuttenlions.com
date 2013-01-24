@@ -1,6 +1,10 @@
 <% provide :page_title, "Newsletter" %>
 <% unless @newsletter.nil? %>
+   <div class="alert alert-info">
+        <%= link_to "Archive of Newsletters", "/show/archive_of_newsletters" %>
 
+
+    </div>
     <% [@newsletter].each do |n| %>
         <% provide :page_title, "Newsletter #{n.period.strftime('%B %Y')}" %>
         <%= n.header.html_safe %>
