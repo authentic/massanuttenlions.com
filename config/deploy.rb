@@ -60,6 +60,13 @@ namespace :deploy do
 
   end
 
+  desc "Creates the production log if it does not exist"
+  task :create_production_log do
+    unless File.exist?(File.join(shared_path, 'log', 'production.log'))
+      puts "\n\n=== Creating Production Log! ===\n\n"
+      run "touch #{File.join(shared_path, 'log', 'production.log')}"
+    end
+  end
  #desc "build missing paperclip styles"
  #task :build_missing_paperclip_styles, :roles => :app do
  #  run "cd #{release_path}; RAILS_ENV=production bundle exec rake paperclip:refresh:missing_styles"
@@ -70,4 +77,4 @@ namespace :deploy do
   #  system "rsync -vr --exclude='.DS_Store' public/ckeditor_assets #{user}@#{application}:#{shared_path}/"
   #end
 end
-after 'deploy:update_code', 'deploy:symlink_config_shared'#, 'deploy:build_missing_paperclip_styles'
+after 'deploy:update_code', 'deploy:symlink_config_shared'#, 'create_production_log'
