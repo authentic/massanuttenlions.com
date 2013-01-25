@@ -70,7 +70,7 @@ SimpleNavigation::Configuration.run do |navigation|
       primary.item :lions_world, 'Lions World', '/show/lions_world' do |sub_nav|
 
         sub_nav.item :lci_history, 'LCI History', '/show/lci_history'
-        sub_nav.item :lci_mission_and_purposes, 'LCI Mission And Purposes', '/show/lci_mission_and_purposes'
+        sub_nav.item :lci_mission_and_purposes, 'LCI Mission & Purposes', '/show/lci_mission_and_purposes'
         sub_nav.item :lci_code_of_ethics, 'LCI Code of Ethics', '/show/lci_code_of_ethics'
         sub_nav.item :helen_kellers_message, 'Helen Keller’s Message', '/show/helen_kellers_message'
 
@@ -84,7 +84,7 @@ SimpleNavigation::Configuration.run do |navigation|
             end
           end
         end
-        sub_nav.item :newsroom, 'Newsroom', '/show/newsroom'
+        #sub_nav.item :newsroom, 'Newsroom', '/show/newsroom'
         sub_nav.item :conferences_and_forms, 'Forms', '/show/conferences_and_forms'
         sub_nav.item :how_to_become_a_club_member, 'Membership', '/show/how_to_become_a_club_member'
         sub_nav.item :faq, 'FAQ', '/show/faq'
