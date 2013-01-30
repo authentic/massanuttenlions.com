@@ -1,7 +1,9 @@
 .navbar {
     display: none;
 }
-
+.archive{
+    display: none;
+}
 #layout {
     padding-left: 0; /* "left col" width */
     padding-right: 0; /* "right col" width */
