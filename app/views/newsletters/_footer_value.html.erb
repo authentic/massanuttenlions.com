@@ -1,5 +1,5 @@
 <h4> <%= @club.current_year %> BOARD OF DIRECTORS</h4>
-<table class="table table-condensed ">
+<table>
   <tbody>
   <tr>
     <td width="50%">
@@ -13,8 +13,9 @@
   </tr>
   </tbody>
 </table>
+<hr>
 <h4> <%= @newsletter.period.strftime("%B").upcase %> BIRTHDAYS</h4>
-<table class="table table-condensed">
+<table>
   <tbody>
   <tr>
     <td width="50%"><%= image_tag("box.jpg") %></td>
@@ -28,4 +29,5 @@
   </tr>
   </tbody>
 </table>
+<hr>
 
