@@ -7,7 +7,7 @@ CKEDITOR.editorConfig = function( config )
 {
     // Define changes to default configuration here. For example:
     // config.language = 'fr';
-    // config.uiColor = '#AADC6E';
+    config.uiColor = '#AADC6E';
 
     /* Filebrowser routes */
     // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
@@ -93,8 +93,11 @@ CKEDITOR.editorConfig = function( config )
     /* Extra plugins */
     // works only with en, ru, uk locales
     config.extraPlugins = "embed,attachment";
-
-    /* Toolbars */
+    config.templates = 'my_templates';
+    config.templates_files = [
+        '/assets/ckeditor/my_templates.js'
+    ];
+     /* Toolbars */
     config.toolbar = 'Full';
 
     config.toolbar_Full =
@@ -111,4 +114,5 @@ CKEDITOR.editorConfig = function( config )
             [ 'Maximize', 'ShowBlocks','-','About' ]
         ];
     config.toolbarCanCollapse = true;
+
 };

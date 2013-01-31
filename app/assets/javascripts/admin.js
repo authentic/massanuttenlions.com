@@ -25,7 +25,8 @@
 //= require twitter/bootstrap/bootstrap-carousel
 //= require twitter/bootstrap/bootstrap-typeahead
 //= require ckeditor/init
-//= require ckeditor/configold
+//= require ckeditor/config
+//= require ckeditor/my_templates
 
 
 

@@ -9,7 +9,8 @@
       <% end %>
     </td>
     <td width="50%" align="center"> <%= image_tag @club.avatar.url(:large) %> <br>
-      <i class="center"><%= @club.current_year %> Board of Directors</i></td>
+      <div class="img_description"><small><i><%= @club.current_year %> Board of Directors</i></small></div>
+      </td>
   </tr>
   </tbody>
 </table>

@@ -75,17 +75,9 @@
             <td><%= club.secretary_email %></td>
           </tr>
           <tr>
-            <th>Phone:</th>
-            <td><%= club.phone %></td>
-          </tr>
-
-
-          <tr>
             <th>Board of Directors Photo:</th>
             <td> <%= image_tag club.avatar.url(:medium) %></td>
           </tr>
-
-
           <tr>
             <th>Actions:</th>
             <td> <%= link_to({:action => 'edit', :id => club.id}, :class => "btn btn-mini btn-primary") do %>

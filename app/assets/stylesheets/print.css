@@ -3,6 +3,7 @@
 }
 .archive{
     display: none;
+    visibility:hidden;
 }
 #layout {
     padding-left: 0; /* "left col" width */

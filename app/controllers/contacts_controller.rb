@@ -4,6 +4,8 @@ class ContactsController < ApplicationController
 
   def contact_us
     @club=Club.last
+    @president= User.where(:status => "Active", :leadership => ['President']).first
+
   end
 
   def president
