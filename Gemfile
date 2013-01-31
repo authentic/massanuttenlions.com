@@ -5,7 +5,7 @@ gem 'mysql2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'simple-navigation-bootstrap'
-gem "ckeditor", "3.7.3"
+gem "ckeditor", "4.0.1"
 gem "devise"
 gem "cancan"
 gem "paperclip", "~> 2.7.4"

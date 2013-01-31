@@ -3,6 +3,10 @@
  For licensing, see LICENSE.html or http://ckeditor.com/license
  */
 CKEDITOR.addTemplates("my_templates", {imagesPath:CKEDITOR.getUrl("/assets/ckeditor/image_template/"), templates:[
+    {title:"Title and Text",
+        image:"template7.gif",
+        description:"A title and text.",
+        html:'<h4>Type the title here</h4><p>Type the text here</p>'},
     {title:"Image and Title",
         image:"template1.gif",
         description:"One main image (on the left) with a title and text that surround the image.",
@@ -11,7 +15,7 @@ CKEDITOR.addTemplates("my_templates", {imagesPath:CKEDITOR.getUrl("/assets/ckedi
         image:"template4.gif",
         description:"One main image (on the right) with a title and text that surround the image.",
         html:'<h4><img style="margin-left: 15px" height="100" width="100" align="right"/>Type the title here</h4><p>Type the text here</p>'},
-    {title:"Strange Template",
+    {title:"Two Colums and Text",
         image:"template2.gif",
         description:"A template that defines two colums, each one with a title, and some text.",
         html:'<table cellspacing="0" cellpadding="0" style="width:100%" border="0"><tr><td style="width:50%"><h4>Title 1</h4></td><td></td><td style="width:50%"><h4>Title 2</h4></td></tr><tr><td>Text 1</td><td></td><td>Text 2</td></tr></table><p>More text goes here.</p>'},
