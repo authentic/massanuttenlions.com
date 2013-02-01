@@ -38,7 +38,7 @@ CKEDITOR.addTemplates("my_templates", {imagesPath:CKEDITOR.getUrl("/assets/ckedi
     {title:"Committee reports",
         image:"template9.gif",
         description:"Club committee reports",
-        html:'<h4>COMMITTEE REPORTS</h4> <h5>Date</h5> <table class="table table-striped table-bordered table-condensed table-hover"><tbody><tr><td>text</td><tr><tr><td></td><tr><tr><td></td><tr><tr><td></td><tr><tr><td></td><tr><tr><td></td><tr></tbody></table><h5>Date</h5> <table class="table table-striped table-bordered table-condensed table-hover"><tbody><tr><td>text</td><tr><tr><td></td><tr><tr><td></td><tr><tr><td></td><tr><tr><td></td><tr><tr><td></td><tr></tbody></table><h5>Date</h5> <table class="table table-striped table-bordered table-condensed table-hover"><tbody><tr><td>text</td><tr><tr><td></td><tr><tr><td></td><tr><tr><td></td><tr><tr><td></td><tr><tr><td></td><tr></tbody></table><div class="clearfix">&nbsp;</div><hr>'}
+        html:'<h4>COMMITTEE REPORTS</h4> <h5>Date</h5> <table class="table table-striped table-bordered table-condensed table-hover"><tbody><tr><td>text</td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table><h5>Date</h5> <table class="table table-striped table-bordered table-condensed table-hover"><tbody><tr><td>text</td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table><h5>Date</h5><table class="table table-striped table-bordered table-condensed table-hover"><tbody><tr><td>text</td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table><div class="clearfix">&nbsp;</div><hr>'}
 ]});
 
 
