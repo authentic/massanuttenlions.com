@@ -9,13 +9,14 @@ class NewslettersController < ApplicationController
 
 
   def index
+    @newsletter= Newsletter.order('newsletters.period ASC').where(:visible => true).last
+    @club=Club.last
     oauth_yaml = YAML.load_file('.google-api.yaml')
     @cal = Google::Calendar.new(:username => oauth_yaml["username"],
                                :password => oauth_yaml["password"],
                                :app_name => oauth_yaml["app_name"],
                                :calendar => oauth_yaml["calendar"])
-    @newsletter= Newsletter.order('newsletters.period ASC').where(:visible => true).last
-    @club=Club.last
+
 
   end
     def archive

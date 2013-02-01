@@ -11,7 +11,7 @@ gem "cancan"
 gem "paperclip", "~> 2.7.4"
 gem "simple_form", "~> 2.0.2"
 gem "will_paginate", "~> 3.0.3"
-gem "google_calendar", "~> 0.2.2"
+gem "google_calendar", "~> 0.2.8"
 gem "omniauth", "~> 1.1.1"
 gem "omniauth-google-oauth2", "~> 0.1.13"
 gem 'json'

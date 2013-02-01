@@ -77,7 +77,7 @@ GEM
     faraday_middleware (0.8.8)
       faraday (>= 0.7.4, < 0.9)
     ffi (1.1.5)
-    google_calendar (0.2.2)
+    google_calendar (0.2.8)
       addressable (>= 2.2.2)
       nokogiri (>= 1.4.4)
     guard (1.5.0)
@@ -263,7 +263,7 @@ DEPENDENCIES
   coffee-rails (= 3.2.2)
   devise
   execjs
-  google_calendar (~> 0.2.2)
+  google_calendar (~> 0.2.8)
   guard-rspec (= 0.5.5)
   guard-spork (= 0.3.2)
   jquery-rails
