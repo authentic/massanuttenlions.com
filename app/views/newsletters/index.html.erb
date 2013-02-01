@@ -30,7 +30,7 @@
 <tbody>
 <% start_min=@newsletter.period.beginning_of_month.to_datetime+5.hour+1.second %>
 <% start_max=@newsletter.period.end_of_month.to_datetime+1.day+5.hour+1.second %>
-<% events = @cal.find_events_in_range(start_min, start_max)  %>
+<% events = @cal.find_events_in_range(start_min, start_max, options={})  %>
   <% events.each do |e| %>
 <tr>
   <td><i><%= e.title %></i></td>
