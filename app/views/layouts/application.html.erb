@@ -18,25 +18,23 @@
   <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= stylesheet_link_tag "print", :media => "print" %>
-
   <script type="text/javascript">
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-37969295-1']);
       _gaq.push(['_trackPageview']);
 
-      (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      (function () {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
       })();
-
   </script>
 </head>
 <body data-spy="scroll" data-target=".subnav" data-offset="50" onload="initialize()">
-
 <%= render "layouts/header" %>
-
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="yui3-g" id="layout">
@@ -47,9 +45,7 @@
         <div class="content"><%= render 'layouts/messages' %>
           <div class="breadcrumbs"><%= render_navigation :renderer => :breadcrumbs, :join_with => " &gt; ", :static_leaf => true %>  </div>
           <%= yield %>
-
-
-         <div class="navigation"> <%= render_navigation :level => 4..5%></div>
+          <div class="navigation"> <%= render_navigation :level => 4..5 %></div>
         </div>
       </div>
       <div class="yui3-u" id="extra">
@@ -59,9 +55,9 @@
                 <%= link_to({:controller => 'pages', :action => 'edit', :id => 76, :subject_id => 10}, :class => "btn btn-mini btn-primary") do %>
                     <i class="icon-pencil"></i> Edit Advertising
                 <% end %>
-            <% end %><hr>
+            <% end %>
+            <hr>
         <% end %>
-
         <% cache @advertising_section do %>
             <div class="well">
               <%= @advertising_section.content.html_safe %>
@@ -72,16 +68,12 @@
   </div>
   <%= render 'layouts/footer' %>
 </div>
-<!-- /container -->
-
 <!-- Javascripts
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
+   ================================================== -->
 <%= javascript_include_tag "application" %>
 <script type="text/javascript">$('.carousel').carousel({
     interval:2000
 })
 </script>
-
 </body>
 </html>

@@ -23,18 +23,19 @@
       _gaq.push(['_setAccount', 'UA-37969295-1']);
       _gaq.push(['_trackPageview']);
 
-      (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      (function () {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
       })();
 
   </script>
 </head>
 <body>
-
 <%= render "layouts/header" %>
-
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="yui3-g" id="layout_cal">
@@ -43,22 +44,14 @@
       </div>
       <div class="yui3-u" id="main_cal">
         <div class="content_cal">  <%= render 'layouts/messages' %>
-          <%= render_navigation :renderer => :breadcrumbs, :join_with => " &gt; ", :static_leaf => true %>
-
+          <div class="breadcrumbs"> <%= render_navigation :renderer => :breadcrumbs, :join_with => " &gt; ", :static_leaf => true %> </div>
           <%= yield %>
-          <%= render_navigation(:level => 4..5) %>
-
-
+          <div class="navigation"><%= render_navigation(:level => 4..5) %></div>
         </div>
       </div>
-      <!--<div class="yui3-u " id="extra"></div>-->
     </div>
   </div>
-
   <%= render 'layouts/footer' %>
-
 </div>
-
-
 </body>
 </html>
