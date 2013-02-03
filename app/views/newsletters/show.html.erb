@@ -1,4 +1,4 @@
-<% provide :page_title, "Show Newsletter: #{@newsletter.period}" %>
+<% provide :page_title, "Test View: Newsletter  #{@newsletter.period}" %>
 <ul class="nav nav-pills">
   <li>
     <%= link_to({:controller => 'access', :action => 'menu'}, :class => "btn-primary") do %>
@@ -18,39 +18,89 @@
   </li>
 
 </ul>
+<div class="yui3-g" id="layout">
+  <div class="yui3-u" id="nav">
+
+  </div>
+  <div class="yui3-u" id="main">
+    <div class="content">
+      <% unless @newsletter.nil? %>
+
+          <% [@newsletter].each do |n| %>
+              <% provide :page_title, "Newsletter #{n.period.strftime('%B %Y')}" %>
+              <%= n.header.html_safe %>
+              <%= n.content.html_safe %>
+              <%= n.footer.html_safe %>
+          <% end %>
+      <% else %>
+          <p class="alert alert-error">No data available!</p>
+      <% end %>
+      <% if @newsletter.period >=Date.new(2012, 6, 30) %>
+
+          <h5>COMING EVENTS</h5>
+
+          <p>Please visit our <%= link_to "Calendar", '/calendar' %> for more details on the following coming
+            events:</p>
+          <h5> <%= @newsletter.period.strftime('%B %Y') %></h5>
+          <table class="table table-striped table-hover table-bordered table-condensed">
+            <thead>
+            <tr>
+              <th>Event Name</th>
+              <th>Start Time</th>
+              <th>Where</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% start_min=@newsletter.period.at_beginning_of_month.to_datetime %>
+            <% start_max=@newsletter.period.at_end_of_month.to_datetime %>
+            <% events = @cal.find_events_in_range(start_min, start_max) %>
+            <% events.each do |e| %>
+                <tr>
+                  <td><strong> <%= e.title %></strong></td>
+                  <td><%= e.start_time.to_datetime.strftime("%B %d, %Y, %I:%M %p") %></td>
+                  <td> <%= e.where %></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <% next_period= @newsletter.period+1.month %>
 
 
+          <h5> <%= next_period.strftime('%B %Y') %></h5>
+          <table class="table table-striped table-hover table-bordered table-condensed">
 
-<div>
+            <tbody>
+            <% start_min_next_period=next_period.at_beginning_of_month.to_datetime %>
+            <% start_max_next_period=next_period.at_end_of_month.to_datetime %>
 
-  <h2><%= "Newsletter Detail View".upcase %> - "<%= @newsletter.period %>"</h2>
-  <table class="table table-striped table-bordered table-condensed" summary="Section detail view">
-    <tbody>
-    <tr>
-      <th>Period:</th>
-      <td><%= @newsletter.period.strftime("%B %Y") %></td>
-    </tr>
-    <tr>
-      <th>Visible:</th>
-      <td><%= @newsletter.visible ? 'true' : 'false' %></td>
-    </tr>
-    <tr>
-      <th>Header:</th>
-      <td><%= @newsletter.header.html_safe %></td>
-    </tr>
-
-    <tr>
-      <th>Created:</th>
-      <td><%= @newsletter.created_at %></td>
-    </tr>
-    <tr>
-      <th>Updated:</th>
-      <td><%= @newsletter.updated_at %></td>
-    </tr>
-    <tr>
-      <th>Content:</th>
-      <td><%= @newsletter.content.html_safe %></td>
-    </tr>
-    </tbody>
-  </table>
+            <% next_period_events = @cal.find_events_in_range(start_min_next_period, start_max_next_period) %>
+            <% next_period_events.each do |i| %>
+                <tr>
+                  <td><strong> <%= i.title %></strong></td>
+                  <td><%= i.start_time.to_datetime.strftime("%B %d, %Y, %I:%M %p") %></td>
+                  <td> <%= i.where %></td>
+                </tr>
+            <% end %>
+      <% end %>
+      </tbody>
+      </table>
+      <div>
+        <table class="table table-striped table-bordered table-condensed" summary="Section detail view">
+          <tbody>
+          <tr>
+            <th>Visible:</th>
+            <td><%= @newsletter.visible ? 'true' : 'false' %></td>
+            <th>Created:</th>
+            <td><%= @newsletter.created_at %></td>
+            <th>Updated:</th>
+            <td><%= @newsletter.updated_at %></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="yui3-u" id="extra">
+  </div>
 </div>
+

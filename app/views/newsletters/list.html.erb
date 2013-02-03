@@ -44,12 +44,10 @@
             <%= link_to({:action => 'delete', :id => newsletter.id}, :class => "btn btn-mini btn-danger") do %>
                 <i class="icon-trash"></i> Delete
             <% end %>
-            <%= link_to({:action => 'show', :id => newsletter.id}, :class => "btn btn-mini btn-info") do %>
-                <i class="icon-info-sign"></i> Info
-            <% end %>
-            <%= link_to({:controller=>'public', :action => 'show', :id => newsletter.period}, :class => "btn btn-mini btn-success") do %>
+            <%= link_to({:action => 'show', :id => newsletter.id}, :class => "btn btn-mini btn-success") do %>
                 <i class="icon-info-sign"></i> test view
             <% end %>
+
           </td>
         </tr>
     <% end %>
