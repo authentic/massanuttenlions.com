@@ -13,9 +13,11 @@
             <%= f.input :user_name, :required => true, :autocomplete => "off" %>
         <% end %>
         <%= f.input :email, :required => true, :autofocus => true %>
-        <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-        <%= f.input :password_confirmation, :required => false %>
-        <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
+        <div class="alert alert-success"><p><i><strong>To Change Password</strong> - fill out all three field below, else leave blank if you don't want to change your password</i></p></div>
+        <%= f.input :current_password, :required => true %>
+        <%= f.input :password,:label => 'New Password', :autocomplete => "off", :required => false %>
+        <%= f.input :password_confirmation,:label => 'Confirm New Password', :required => false %>
+
       </div>
     </fieldset>
     <%= render(:partial => "devise/shared/profile_info", :locals => {:f => f}) %>
