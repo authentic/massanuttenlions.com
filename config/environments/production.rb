@@ -79,6 +79,7 @@ MassanuttenlionsCom::Application.configure do
       :authentication => :login,
       :enable_starttls_auto => true,
       :user_name => "massanut",
+      :openssl_verify_mode  => 'none',
       :password => "MassMcGahey"
   }
 
