@@ -73,13 +73,13 @@ MassanuttenlionsCom::Application.configure do
   config.action_mailer.default :charset => "utf-8"
 
   config.action_mailer.smtp_settings = {
-      :address => "smtp.gmail.com",
+      :address => "mail.massanuttenlions.org",
       :port => 587,
-      :domain => "example.com",
-      :authentication => "plain",
+      :domain => "massanuttenlions.org",
+      :authentication => :login,
       :enable_starttls_auto => true,
-      :user_name => ENV["GMAIL_USERNAME"],
-      :password => ENV["GMAIL_PASSWORD"]
+      :user_name => "webmaster@massanuttenlions.org",
+      :password => "5346Trevino"
   }
 
   config.assets.precompile += Ckeditor.assets
