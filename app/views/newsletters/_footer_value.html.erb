@@ -8,9 +8,12 @@
           <br>
       <% end %>
     </td>
-    <td width="50%" align="center"> <%= image_tag @club.avatar.url(:large) %> <br>
-      <div class="img_description"><small><i><%= @club.current_year %> Board of Directors</i></small></div>
-      </td>
+    <td width="50%" align="center">
+      <figure class="float-left">
+        <%= image_tag @club.avatar.url(:large), :class => "thumbnail" %>
+        <figcaption><%= @club.current_year %> Board of Directors</figcaption>
+      </figure>
+    </td>
   </tr>
   </tbody>
 </table>
