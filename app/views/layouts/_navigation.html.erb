@@ -17,14 +17,16 @@
             <li>
               <%= link_to 'Admin', "/admin" %>
             </li>
-        <% end %>  </ul>
+        <% end %>  </ul></div>
   <% else %>
-      <%= link_to(new_user_session_path, :class=>"btn btn-mini pull-right") do %>
+      <div class="pull-right">
+      <%= link_to(new_user_session_path, :class=>"btn btn-mini") do %>
         <i class="icon-user"></i> Login
       <% end %>
+          </div>
 
 
-      </div>
+
   <% end %>
 <!--/.nav-collapse -->
 
