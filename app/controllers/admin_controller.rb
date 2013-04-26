@@ -25,7 +25,7 @@ class AdminController < ApplicationController
   def create
     #Instantiate a new object using form parameters
     @user = User.new(params[:user])
-    @user.skip_confirmation!
+    #@user.skip_confirmation!
     if @user.save
       #If save succeeds, redirect to the list action
       flash[:notice] = 'User created.'
