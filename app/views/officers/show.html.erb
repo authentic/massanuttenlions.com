@@ -4,7 +4,7 @@
   <h1>LOMFI Officers <%= @current_year ? @current_year.current_year : "" %></h1>
 </div>
 <ul class="thumbnails">
-  <% @users.each do |user| %>
+  <% @users_officers.each do |user| %>
       <li>
         <div class="thumbnail center leadership">
           <%= image_tag user.avatar.url(:medium) %>
@@ -12,7 +12,17 @@
         </div>
       </li> <p ><%= user.biography %></p>
       <div class="clearfix"></div>  <hr>
-  <% end %></ul>
+  <% end %>
+  <% @users_leadership.each do |user| %>
+      <li>
+        <div class="thumbnail center leadership">
+          <%= image_tag user.avatar.url(:medium) %>
+          <h6>DIRECTOR <br><%= user.signature %></h6>
+        </div>
+      </li> <p ><%= user.biography %></p>
+      <div class="clearfix"></div>  <hr>
+  <% end %>
+</ul>
 
 
 

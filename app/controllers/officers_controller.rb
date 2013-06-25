@@ -9,7 +9,9 @@ class OfficersController < ApplicationController
   end
 
   def show
-    @users = User.sorted_by_officers.where(:status => "Active", :officers => ['President', 'Vice President', 'Secretary', 'Treasurer', 'Director'])
+
+    @users_officers = User.sorted_by_officers.where(:status => "Active", :officers => ['President', 'Vice President', 'Secretary', 'Treasurer'])
+    @users_leadership = User.sorted_by_leadership.where(:status => "Active", :leadership => ['President', 'First Vice President', 'Second Vice President', 'Third Vice President', 'Secretary'])
     @current_year=Club.last
   end
 end
