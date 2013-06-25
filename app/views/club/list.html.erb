@@ -20,10 +20,10 @@
             <i class="icon-plus"></i> Add New Club Information
         <% end %>    </li>
     </ul>
-
+    <% @clubs.each do |club| %>
     <table class="table table-striped table-bordered table-condensed" summary="Club list">
       <tbody>
-      <% @clubs.each do |club| %>
+
           <tr>
             <th>Current year:</th>
             <td><strong><%= club.current_year %></strong></td>
@@ -94,11 +94,11 @@
 
             </td>
           </tr>
-      <% end %>
+
       </tbody>
 
     </table>
-    <hr>
+    <hr><% end %>
   </div>
 
 </div>
