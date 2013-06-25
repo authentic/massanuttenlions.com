@@ -36,7 +36,7 @@ SimpleNavigation::Configuration.run do |navigation|
           sub_sub_nav.item :lomfi_annual_charity_golf_tournament, 'LOMFI Annual Charity Golf Tournament', '/show/lomfi_annual_charity_golf_tournament' do |sub_sub_sub_nav|
             sub_sub_sub_nav.item :anual_massanutten_lions_club_charity_golf_tournament_details, 'Tournament Details', '/show/anual_massanutten_lions_club_charity_golf_tournament_details'
           end
-          sub_sub_nav.item :massanutten_lions_club_annual_charity_cruise_in, 'Massanutten Lions Club Annual Charity Cruise In', '/show/massanutten_lions_club_annual_charity_cruise_in'
+          #sub_sub_nav.item :massanutten_lions_club_annual_charity_cruise_in, 'Massanutten Lions Club Annual Charity Cruise In', '/show/massanutten_lions_club_annual_charity_cruise_in'
           sub_sub_nav.item :massanutten_lions_club_raffle_of_lovf_tickets, 'Massanutten Lions Club Raffle of LOVF Tickets', '/show/massanutten_lions_club_raffle_of_lovf_tickets'
           sub_sub_nav.item :massanutten_lions_club_ski_concessions, 'Massanutten Lions Club Ski Concessions', '/show/massanutten_lions_club_ski_concessions'
           sub_sub_nav.item :massanutten_lions_club_recycling_program, 'Massanutten Lions Club Recycling Program', '/show/massanutten_lions_club_recycling_program'
