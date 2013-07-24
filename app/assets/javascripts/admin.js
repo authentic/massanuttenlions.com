@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor/init
+//= require ckeditor/config
+//= require ckeditor/my_templates
 //= require twitter/bootstrap/bootstrap-transition
 //= require twitter/bootstrap/bootstrap-alert
 //= require twitter/bootstrap/bootstrap-modal
@@ -24,9 +27,6 @@
 //= require twitter/bootstrap/bootstrap-collapse
 //= require twitter/bootstrap/bootstrap-carousel
 //= require twitter/bootstrap/bootstrap-typeahead
-//= require ckeditor/init
-//= require ckeditor/config
-//= require ckeditor/my_templates
 
 
 

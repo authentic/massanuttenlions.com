@@ -92,7 +92,7 @@ CKEDITOR.editorConfig = function( config )
 
     /* Extra plugins */
     // works only with en, ru, uk locales
-    config.extraPlugins = "embed,attachment";
+//    config.extraPlugins = "embed,attachment";
     config.templates = 'my_templates';
     config.templates_files = [
         '/assets/ckeditor/my_templates.js'
