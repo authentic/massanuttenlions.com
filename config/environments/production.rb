@@ -80,7 +80,7 @@ MassanuttenlionsCom::Application.configure do
       :enable_starttls_auto => true,
       :user_name => "massanut",
       :openssl_verify_mode  => 'none',
-      :password => "MassMcGahey"
+      :password => "5346Trevino"
   }
 
   config.assets.precompile += Ckeditor.assets
