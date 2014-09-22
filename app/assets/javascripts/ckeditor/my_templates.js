@@ -3,6 +3,10 @@
  For licensing, see LICENSE.html or http://ckeditor.com/license
  */
 CKEDITOR.addTemplates("my_templates", {imagesPath:CKEDITOR.getUrl("/assets/ckeditor/image_template/"), templates:[
+    {title:"President's message",
+        image:"template6.gif",
+        description:"President's message",
+        html:'<figure class="float-left"><img class="thumbnail" height="170" width="170" src="" alt="" /><figcaption>Type the description here</figcaption></figure><h4><em>President&#39;s message</em></h4><p>Type the text here</p><hr class="clearfix"/>'},
     {title:"Title and Text",
         image:"template7.gif",
         description:"A title and text.",

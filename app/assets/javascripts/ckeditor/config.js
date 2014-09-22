@@ -98,6 +98,7 @@ CKEDITOR.editorConfig = function( config )
         '/assets/ckeditor/my_templates.js'
     ];
     config.templates_replaceContent = false;
+    config.allowedContent = true;
      /* Toolbars */
     config.toolbar = 'Full';
 

@@ -73,6 +73,7 @@ class NewslettersController < ApplicationController
     @newsletter=Newsletter.find(params[:id])
     @club=Club.last
     @president = User.where(:status => "Active", :leadership => %w(President)).first
+    @treasurer = User.where(:status => "Active", :leadership => %w(Treasurer)).first
     @editor=User.where(:status => "Active", :newsletter_editor => %w(Editor)).first
     @secretary=User.where(:status => "Active", :leadership => %w(Secretary)).first
     @photographer=User.where(:status => "Active", :photographer => %w(Photographer)).first

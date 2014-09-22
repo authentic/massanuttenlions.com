@@ -15,8 +15,8 @@
                 <em><strong>Secretary:</strong></em> <%= @secretary.signature %>
                 <a href='mailto:#' target='_blank'> <%= @club.secretary_email %></a><br>
             <% end %>
-            <% if @editor %>
-                <em><strong> Newsletter:</strong></em> <%= @editor.signature %>
+            <% if @treasurer %>
+                <em><strong> Treasurer:</strong></em> <%= @treasurer.signature %>
                 <a href='mailto:#' target='_blank'> <%= @club.newsletter_editor_email %></a><br>
             <% end %>
             <% if @photographer %>
