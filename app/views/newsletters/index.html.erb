@@ -23,8 +23,9 @@
 <thead>
 <tr>
   <th width="20%" style="text-align: center;vertical-align: middle;">Event Name</th>
-  <th width="20%" style="text-align: center;vertical-align: middle;">Start Time</th>
-  <th width="60%" style="text-align: center;vertical-align: middle;">Where</th>
+  <th width="20%" style="text-align: center;vertical-align: middle;">When</th>
+  <th width="30%" style="text-align: center;vertical-align: middle;">Where</th>
+  <th width="30%" style="text-align: center;vertical-align: middle;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -35,7 +36,8 @@
 <tr>
   <td><i><%= e.title %></i></td>
   <td><%= e.start_time.to_datetime.strftime("%B %d, %Y, %I:%M %p") %></td>
-  <td><%= e.where %></td>
+  <td><%= e.location%></td>
+  <td><%= e.description%></td>
 </tr>
 <% end %>
 </tbody>
@@ -48,8 +50,9 @@
   <thead>
   <tr>
     <th width="20%" style="text-align: center;vertical-align: middle;">Event Name</th>
-    <th width="20%" style="text-align: center;vertical-align: middle;">Start Time</th>
-    <th width="60%" style="text-align: center;vertical-align: middle;">Where</th>
+    <th width="20%" style="text-align: center;vertical-align: middle;">When</th>
+    <th width="30%" style="text-align: center;vertical-align: middle;">Where</th>
+    <th width="30%" style="text-align: center;vertical-align: middle;">Description</th>
   </tr>
   </thead>
   <tbody>
@@ -60,7 +63,8 @@
       <tr>
         <td><i><%= i.title %></i></td>
         <td><%= i.start_time.to_datetime.strftime("%B %d, %Y, %I:%M %p") %></td>
-        <td> <%= i.where %></td>
+        <td> <%= i.location %></td>
+        <td> <%= i.description %></td>
       </tr>
   <% end %>
   </tbody>

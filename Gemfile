@@ -6,12 +6,12 @@ gem 'mysql2'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'simple-navigation-bootstrap'
 gem "ckeditor", "4.0.4"
-gem "devise"
+gem "devise", "2.2.8"
 gem "cancan"
 gem "paperclip", "~> 2.7.4"
 gem "simple_form"
 gem "will_paginate", "~> 3.0.3"
-gem "google_calendar", "~> 0.2.8"
+gem "google_calendar", "~> 0.4.3"
 gem "omniauth", "~> 1.1.1"
 gem "omniauth-google-oauth2", "~> 0.1.13"
 gem 'json'
@@ -58,12 +58,11 @@ gem 'capistrano'
 
 group :test do
   gem 'capybara', '001.001.2'
-  gem 'rspec-rails', '2.10.0'
-  gem 'rb-inotify', '0.8.8'
+    gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
 end
 
 gem 'execjs'
-gem 'therubyracer', :require => 'execjs'
+#gem 'therubyracer', :require => 'execjs'
