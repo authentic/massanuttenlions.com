@@ -106,7 +106,7 @@ set :use_sudo, false
 ssh_options[:port] = 7822
 ssh_options[:keys] = %w(~/.ssh/id_rsa)
 set :scm_verbose, true
-set :bundle_cmd, 'source $HOME/.bash_profile && bundle'
+
 #############################################################
 #	Servers
 #############################################################
@@ -156,6 +156,16 @@ namespace :deploy do
       run "touch #{File.join(shared_path, 'log', 'production.log')}"
     end
   end
+
+  # namespace :assets do
+  #   desc "Precompile assets on local machine and upload them to the server."
+  #   task :precompile, roles: :web, except: {no_release: true} do
+  #     run_locally "bundle exec rake assets:precompile RAILS_ENV=development"
+  #     find_servers_for_task(current_task).each do |server|
+  #       run_locally "rsync -vr  --exclude='.DS_Store' --rsh 'ssh -p #{ssh_options[:port]}' public/assets  #{user}@a2s76.a2hosting.com:#{shared_path}/"
+  #     end
+  #   end
+  # end
 #desc "build missing paperclip styles"
 #task :build_missing_paperclip_styles, :roles => :app do
 #  run "cd #{release_path}; RAILS_ENV=production bundle exec rake paperclip:refresh:missing_styles"
@@ -166,4 +176,5 @@ namespace :deploy do
 #  system "rsync -vr --exclude='.DS_Store' public/ckeditor_assets #{user}@#{application}:#{shared_path}/"
 #end
 end
-after 'deploy:update_code', 'deploy:symlink_config_shared', 'create_production_log'
+#after 'deploy:update_code', 'create_production_log'
+before 'bundle:install', 'deploy:symlink_config_shared'

@@ -23,21 +23,21 @@
 <thead>
 <tr>
   <th width="20%" style="text-align: center;vertical-align: middle;">Event Name</th>
-  <th width="20%" style="text-align: center;vertical-align: middle;">When</th>
-  <th width="30%" style="text-align: center;vertical-align: middle;">Where</th>
-  <th width="30%" style="text-align: center;vertical-align: middle;">Description</th>
+  <th width="30%" style="text-align: center;vertical-align: middle;">When</th>
+  <th width="50%" style="text-align: center;vertical-align: middle;">Where</th>
+
 </tr>
 </thead>
 <tbody>
-<% start_min=@newsletter.period.beginning_of_month.to_datetime+5.hour+1.second %>
-<% start_max=@newsletter.period.end_of_month.to_datetime+1.day+5.hour+1.second %>
+<% start_min=@newsletter.period.beginning_of_month.to_datetime %>
+<% start_max=@newsletter.period.end_of_month.to_datetime+23.hour+59.minute+59.second %>
 <% events = @cal.find_events_in_range(start_min, start_max, options={})  %>
   <% events.each do |e| %>
 <tr>
   <td><i><%= e.title %></i></td>
-  <td><%= e.start_time.to_datetime.strftime("%B %d, %Y, %I:%M %p") %></td>
+  <td><%= (e.start_time.to_datetime-5.hour).strftime("%B %d, %Y, %I:%M %p")+" - "+(e.end_time.to_datetime-5.hour).strftime("%I:%M %p")%></td>
   <td><%= e.location%></td>
-  <td><%= e.description%></td>
+
 </tr>
 <% end %>
 </tbody>
@@ -50,21 +50,20 @@
   <thead>
   <tr>
     <th width="20%" style="text-align: center;vertical-align: middle;">Event Name</th>
-    <th width="20%" style="text-align: center;vertical-align: middle;">When</th>
-    <th width="30%" style="text-align: center;vertical-align: middle;">Where</th>
-    <th width="30%" style="text-align: center;vertical-align: middle;">Description</th>
+    <th width="30%" style="text-align: center;vertical-align: middle;">When</th>
+    <th width="50%" style="text-align: center;vertical-align: middle;">Where</th>
   </tr>
   </thead>
   <tbody>
-  <% start_min_next_period=next_period.at_beginning_of_month.to_datetime+5.hour+1.second %>
-  <% start_max_next_period=next_period.at_end_of_month.to_datetime+1.day+5.hour+1.second %>
+  <% start_min_next_period=next_period.at_beginning_of_month.to_datetime %>
+  <% start_max_next_period=next_period.at_end_of_month.to_datetime+23.hour+59.minute+59.second %>
 <% next_period_events = @cal.find_events_in_range(start_min_next_period, start_max_next_period)  %>
 <% next_period_events.each do |i| %>
       <tr>
         <td><i><%= i.title %></i></td>
-        <td><%= i.start_time.to_datetime.strftime("%B %d, %Y, %I:%M %p") %></td>
+        <td><%= (i.start_time.to_datetime-5.hour).strftime("%B %d, %Y, %I:%M %p")+" - "+(i.end_time.to_datetime-5.hour).strftime("%I:%M %p")%></td>
         <td> <%= i.location %></td>
-        <td> <%= i.description %></td>
+
       </tr>
   <% end %>
   </tbody>
