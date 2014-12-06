@@ -15,7 +15,7 @@ gem "google_calendar", "~> 0.4.3"
 gem "omniauth", "~> 1.1.1"
 gem "omniauth-google-oauth2", "~> 0.1.13"
 gem 'json'
-gem "octokit"
+gem "octokit", '~> 1.23'
 gem 'mercury-rails'
 
 
@@ -27,12 +27,12 @@ group :development do
   # Deploy with Capistrano
 
 
-  gem 'capistrano'
-  gem 'capistrano-bundler' # for capistrano/bundler
-  gem 'capistrano-rails' # for capistrano/rails/*
-  gem 'capistrano-passenger'
-  gem 'capistrano-linked-files'
-  gem 'net-ssh', '2.8.0'
+  gem 'capistrano', '~> 2.15'
+  # gem 'capistrano-bundler' # for capistrano/bundler
+  # gem 'capistrano-rails' # for capistrano/rails/*
+  # gem 'capistrano-passenger'
+  # gem 'capistrano-linked-files'
+  # gem 'net-ssh', '2.8.0'
 end
 
 # Gems used only for assets and not required

@@ -4,18 +4,18 @@
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :app, %w{massanut.www76.a2hosting.com}
-role :web, %w{massanut.www76.a2hosting.com}
-role :db,  %w{massanut.www76.a2hosting.com}
-
-
-# Extended Server Syntax
-# ======================
-# This can be used to drop a more detailed server definition into the
-# server list. The second argument is a, or duck-types, Hash and is
-# used to set extended properties on the server.
-
-server 'massanut.www76.a2hosting.com', user: 'massanut', roles: %w{web app db} ,port: 7822, password: fetch(:password)#my_property: :my_value
+# role :app, %w{massanut.www76.a2hosting.com}
+# role :web, %w{massanut.www76.a2hosting.com}
+# role :db,  %w{massanut.www76.a2hosting.com}
+#
+#
+# # Extended Server Syntax
+# # ======================
+# # This can be used to drop a more detailed server definition into the
+# # server list. The second argument is a, or duck-types, Hash and is
+# # used to set extended properties on the server.
+#
+# server 'massanut.www76.a2hosting.com', user: 'massanut', roles: %w{web app db} ,port: 7822, password: fetch(:password)#my_property: :my_value
 
 # Custom SSH Options
 # ==================
@@ -24,14 +24,15 @@ server 'massanut.www76.a2hosting.com', user: 'massanut', roles: %w{web app db} ,
 #
 # Global options
 # --------------
-set :ssh_options, {
-    user: fetch(:user),
-    password: fetch(:password),
-    keys: %w(/home/.ssh/id_rsa),
-    port:7822,
-    forward_agent: true,
-    auth_methods: %w(publickey)
-}
+# set :ssh_options, {
+#     user: fetch(:user),
+#     password: fetch(:password),
+#     keys: %w(/home/.ssh/id_rsa),
+#     port:7822,
+#     forward_agent: true,
+#     auth_methods: %w(publickey)
+# }
+
 #
 # And/or per server (overrides global)
 # ------------------------------------
