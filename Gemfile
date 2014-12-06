@@ -72,5 +72,5 @@ group :test do
   gem 'spork', '0.9.0'
 end
 
-gem 'execjs'
+gem 'execjs', "1.4.0"
 #gem 'therubyracer', :require => 'execjs'
