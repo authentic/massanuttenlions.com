@@ -4,7 +4,8 @@ gem 'rails', '3.2.11'
 gem 'mysql2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'simple-navigation-bootstrap', "0.0.4"
+gem 'simple-navigation-bootstrap', "1.0.0"
+gem 'simple-navigation', "3.10.0"
 gem "ckeditor", "4.0.4"
 gem "devise", "2.2.8"
 gem "cancan"
