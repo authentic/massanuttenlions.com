@@ -38,10 +38,12 @@ class NewslettersController < ApplicationController
   def show
     @newsletter = Newsletter.find(params[:id])
     oauth_yaml = YAML.load_file('.google-api.yaml')
-    @cal = Google::Calendar.new(:username => oauth_yaml["username"],
-                                :password => oauth_yaml["password"],
-                                :app_name => oauth_yaml["app_name"],
-                                :calendar => oauth_yaml["calendar"])
+    @cal = Google::Calendar.new(:client_id     => oauth_yaml["client_id"],
+                                :client_secret => oauth_yaml["client_secret"],
+                                :calendar      => oauth_yaml["calendar"],
+                                :redirect_url  => "urn:ietf:wg:oauth:2.0:oob",
+                                :refresh_token=> oauth_yaml["refresh_token"]) # this is what Google uses for 'applications'
+
 
   end
 
