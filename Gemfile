@@ -23,6 +23,16 @@ group :development do
   gem 'guard-rspec', '0.5.5'
   gem 'rspec-rails', '2.10.0'
   gem 'annotate', '2.5.0'
+
+  # Deploy with Capistrano
+
+
+  gem 'capistrano'
+  gem 'capistrano-bundler' # for capistrano/bundler
+  gem 'capistrano-rails' # for capistrano/rails/*
+  gem 'capistrano-passenger'
+  gem 'capistrano-linked-files'
+  gem 'net-ssh', '2.8.0'
 end
 
 # Gems used only for assets and not required
@@ -48,9 +58,6 @@ gem 'jquery-rails'
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
-# Deploy with Capistrano
-gem 'capistrano'
 
 
 # To use debugger
