@@ -94,8 +94,8 @@ class User < ActiveRecord::Base
   end
 
   scope :sorted, order("users.last_name ASC, users.first_name ASC")
-  scope :sorted_by_officers, order("FIELD (users.officers, 'President', 'Vice President', 'Secretary', 'Treasurer', 'Director')")
-  scope :sorted_by_leadership, order("FIELD (users.leadership, 'President', 'First Vice President', 'Second Vice President', 'Third Vice President', 'Secretary', 'Treasurer', 'Lion Tamer', 'Tail Twister', 'Membership Chair', 'Director 1 Year', 'Director 2 Year', 'Past President' )")
+  scope :sorted_by_officers, order("FIELD (users.officers, 'LOMFI President', 'LOMFI Vice President', 'LOMFI Secretary', 'LOMFI Treasurer', 'LOMFI Director')")
+  scope :sorted_by_leadership, order("FIELD (users.leadership, 'President', 'Vice President', 'Secretary', 'Treasurer', 'Lion Tamer', 'Tail Twister', 'Membership Chair', 'Director 2 Year', 'Past President' )")
 
   scope :with_role, lambda { |role| {:conditions => "roles_mask & #{2**ROLES.index(role.to_s)} > 0"} }
 end

@@ -11,6 +11,15 @@
             </div>
           </li> <p ><%= user.biography %></p>
       <div class="clearfix"></div>  <hr>
-      <% end %></ul>
+      <% end %>
+  <% @users_officers.each do |user| %>
+      <li>
+        <div class="thumbnail center leadership">
+          <%= image_tag user.avatar.url(:medium) %>
+          <h6><%= user.officers.upcase %> <br><%= user.signature %></h6>
+        </div>
+      </li> <p ><%= user.biography %></p>
+      <div class="clearfix"></div>  <hr>
+  <% end %></ul>
 
 

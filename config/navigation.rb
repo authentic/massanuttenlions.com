@@ -49,7 +49,7 @@ SimpleNavigation::Configuration.run do |navigation|
           sub_sub_nav.item :blue_ridge_food_bank, 'Blue Ridge Food Bank', '/show/blue_ridge_food_bank'
           sub_sub_nav.item :elkton_area_united_services, 'Elkton Area United Services', '/show/elkton_area_united_services'
           sub_sub_nav.item :harrisonburg_rockingham_free_clinic, 'Harrisonburg-Rockingham Free Clinic', '/show/harrisonburg_rockingham_free_clinic'
-          sub_sub_nav.item :harrisonburg_rockingham_free_dental_clinic, 'Harrisonburg Rockingham Free Dental Clinic', '/show/harrisonburg_rockingham_free_dental_clinic'
+          sub_sub_nav.item :harrisonburg_rockingham_free_dental_clinic, 'Harrisonburg-Rockingham Free Dental Clinic', '/show/harrisonburg_rockingham_free_dental_clinic'
           sub_sub_nav.item :project_healing_waters, 'Project Healing Waters', '/show/project_healing_waters'
           sub_sub_nav.item :elkton_family_childrens_medical_clinic, 'Elkton Family & Children’s Medical Clinic', '/show/elkton_family_childrens_medical_clinic'
           sub_sub_nav.item :healthy_families_of_the_blue_ridge, 'Healthy Families of the Blue Ridge', '/show/healthy_families_of_the_blue_ridge'
