@@ -21,7 +21,7 @@ SimpleNavigation::Configuration.run do |navigation|
       end
       primary.item :about_our_service, 'About Our Service', '/show/about_our_service' do |sub_nav|
         sub_nav.item :our_foundation, 'Our Foundation', '/show/our_foundation' do |sub_sub_nav|
-          sub_sub_nav.item :lomfi_officers, 'LOMFI Officers', '/officers/show'
+          sub_sub_nav.item :lomfi_officers, 'LOMFI Officers and Directors', '/officers/show'
         end
         sub_nav.item :service_work, 'Service Work', '/show/service_work' do |sub_sub_nav|
           sub_sub_nav.item :safety_town, 'Safety Town', '/show/safety_town'
@@ -49,6 +49,8 @@ SimpleNavigation::Configuration.run do |navigation|
           sub_sub_nav.item :blue_ridge_food_bank, 'Blue Ridge Food Bank', '/show/blue_ridge_food_bank'
           sub_sub_nav.item :elkton_area_united_services, 'Elkton Area United Services', '/show/elkton_area_united_services'
           sub_sub_nav.item :harrisonburg_rockingham_free_clinic, 'Harrisonburg-Rockingham Free Clinic', '/show/harrisonburg_rockingham_free_clinic'
+          sub_sub_nav.item :harrisonburg_rockingham_free_dental_clinic, 'Harrisonburg Rockingham Free Dental Clinic', '/show/harrisonburg_rockingham_free_dental_clinic'
+          sub_sub_nav.item :project_healing_waters_fly_fishing, 'Project Healing Waters Fly Fishing', '/show/project_healing_waters_fly_fishing'
           sub_sub_nav.item :elkton_family_childrens_medical_clinic, 'Elkton Family & Children’s Medical Clinic', '/show/elkton_family_childrens_medical_clinic'
           sub_sub_nav.item :healthy_families_of_the_blue_ridge, 'Healthy Families of the Blue Ridge', '/show/healthy_families_of_the_blue_ridge'
           sub_sub_nav.item :lions_clubs_international_sight_first_II, 'Lions Clubs International Sight First II', '/show/lions_clubs_international_sight_first_II'
