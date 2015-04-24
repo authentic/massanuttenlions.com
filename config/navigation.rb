@@ -6,8 +6,8 @@ SimpleNavigation::Configuration.run do |navigation|
       primary.item :about_our_club, 'About Our Club', '/show/about_our_club' do |sub_nav|
         sub_nav.item :history, 'History', '/show/history'
         sub_nav.item :goal_objectives, 'Goal and Objectives', '/show/goal_objectives'
-        sub_nav.item :leadership, 'Leadership', '/leaders/show'
-        sub_nav.item :members, 'Members', '/members/show'
+        sub_nav.item :leadership, 'Club Leadership', '/leaders/show'
+        sub_nav.item :members, 'Club Members', '/members/show'
         sub_nav.item :meetings, 'Meetings', '/show/meetings'
         sub_nav.item :district_24_c, 'District 24-C', '/show/district_24_c' do |sub_sub_nav|
           sub_sub_nav.item :elkton_lions_club, 'Elkton Lions Club', '/show/elkton_lions_club'
