@@ -80,7 +80,7 @@ class NewslettersController < ApplicationController
     @editor=User.where(:status => "Active", :newsletter_editor => %w(Editor)).first
     @secretary=User.where(:status => "Active", :leadership => %w(Secretary)).first
     @photographer=User.where(:status => "Active", :photographer => %w(Photographer)).first
-    @leaders = User.sorted_by_leadership.where(:status => "Active", :leadership => ['President', 'First Vice President', 'Second Vice President', 'Third Vice President', 'Secretary', 'Treasurer', 'Lion Tamer', 'Tail Twister', 'Membership Chair', 'Director 1 Year', 'Director 2 Year', 'Past President'])
+    @leaders = User.sorted_by_leadership.where(:status => "Active", :leadership => ['President', 'Vice President', 'Secretary', 'Treasurer', 'Lion Tamer', 'Tail Twister', 'Membership Chair', 'Director 2 Year', 'Past President'])
     @users=User.where(:status => "Active")
   end
 
