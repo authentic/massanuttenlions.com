@@ -82,6 +82,7 @@ class NewslettersController < ApplicationController
     @photographer=User.where(:status => "Active", :photographer => %w(Photographer)).first
     @leaders = User.sorted_by_leadership.where(:status => "Active", :leadership => ['President', 'Vice President', 'Secretary', 'Treasurer', 'Lion Tamer', 'Tail Twister', 'Membership Chair', 'Director 2 Year', 'Past President'])
     @users=User.where(:status => "Active")
+    @officers = User.sorted_by_officers.where(:status => "Active", :officers => ['LOMFI President'])
   end
 
   def update

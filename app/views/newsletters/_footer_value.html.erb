@@ -7,7 +7,13 @@
           <em><%= leader.leadership %>:&nbsp;&nbsp;</em></strong> <%= leader.signature %>
           <br>
       <% end %>
+      <% @officers.each do |officer| %>
+          <em><%= officer.officers %>:&nbsp;&nbsp;</em></strong> <%= officer.signature %>
+          <br>
+      <% end %>
+
     </td>
+
     <td width="50%" align="center">
       <figure class="float-left">
 
